@@ -1,5 +1,5 @@
 'use client';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import StarTextArea from '../ui/StarTextArea';
 import { MasterPrimaryButton } from '../ui/MasterPrimaryButton';
 import { useStarforceInfoArray } from '../context/starforceInfoContext';
@@ -12,7 +12,7 @@ import { useLoading } from '../context/loadingContext';
 import { useContentError } from '../context/contentErrorContext';
 
 export default function ApiKeyInputPanel() {
-  const [text, setText] = useState(localStorage.getItem('apiKey') || '');
+  const [text, setText] = useState('');
   const handleChange = (e) => {
     e.preventDefault();
     setText(e.target.value);
@@ -93,6 +93,10 @@ export default function ApiKeyInputPanel() {
   const onClickReset = useCallback(() => {
     setText('');
     localStorage.removeItem('apiKey');
+  }, []);
+  useEffect(() => {
+    if (localStorage.getItem('apiKey') === null) return;
+    setText(localStorage.getItem('apiKey'));
   }, []);
   return (
     <div className='mb-10 w-full'>
