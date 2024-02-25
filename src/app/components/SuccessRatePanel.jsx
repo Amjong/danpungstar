@@ -123,10 +123,11 @@ function Table({ columns, data }) {
     <table {...getTableProps()} className='min-w-full divide-y divide-gray-200'>
       <thead className='bg-black font-bold text-white border-b-2 border-white '>
         {headerGroups.map((headerGroup) => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
+          <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.key}>
             {headerGroup.headers.map((column) => (
               <th
                 {...column.getHeaderProps()}
+                key={column.key}
                 className='px-6 py-3 text-left text-xs text-white uppercase tracking-wider'
               >
                 {column.render('Header')}
@@ -162,11 +163,12 @@ function Table({ columns, data }) {
         {rows.map((row) => {
           prepareRow(row);
           return (
-            <tr {...row.getRowProps()}>
+            <tr {...row.getRowProps()} key={row.key}>
               {row.cells.map((cell, i) => {
                 return (
                   <td
                     {...cell.getCellProps()}
+                    key={cell.key}
                     className={`px-6 py-4 whitespace-nowrap text-sm text-white font-regular border-1 border-b border-white ${
                       i % 2 === 0 ? 'bg-n2' : 'bg-n1'
                     }`}
