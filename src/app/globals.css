@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* import your font */
+@font-face {
+  font-family: 'NexonGothicBold';
+  src: url('/public/fonts/NEXON Lv1 Gothic OTF Bold.woff') format('woff'); /* adjust the path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexonGothicRegular';
+  src: url('/public/fonts/NEXON Lv1 Gothic OTF.woff') format('woff'); /* adjust the path and format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  background-color: #282c47;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,13 +36,66 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'NexonGothicBold', 'NexonGothicRegular'; /* use the font-family you specified in @font-face */
+  .react-datepicker {
+    font-family: 'NexonGothicRegular';
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #282c47;
+    color: #ffffff;
+    font-size: 10px;
+
+    .react-datepicker__header {
+      background-color: #282c47;
+      color: #ffffff;
+      border-bottom: 1px solid white;
+
+      .react-datepicker__day-names {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .react-datepicker__day-name {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .react-datepicker__day {
+      color: #ffffff;
+    }
+
+    .react-datepicker__day--disabled {
+      color: gray;
+    }
+
+    .react-datepicker__day--today {
+      color: #ffffff;
+      border: none;
+      background-color: #282c47;
+    }
+
+    .react-datepicker__day--selected {
+      color: #ffe380;
+      border: 1px solid #ffe380;
+      border-radius: 100%;
+      background-color: #282c47;
+    }
+
+    .react-datepicker__day:hover {
+      background-color: #ffe380;
+      color: black;
+      border-radius: 100%;
+    }
+
+    .react-datepicker__triangle {
+      display: none;
+    }
+  }
+}
+
+body > iframe {
+  display: none;
 }
 
 @layer utilities {
