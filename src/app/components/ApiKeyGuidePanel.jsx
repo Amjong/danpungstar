@@ -41,9 +41,10 @@ export default function ApiKeyGuidePanel() {
         <div className='mb-10'>
           3. 메이플스토리 를 선택해주세요. <br /> <br />
           4. 서비스 단계 를 선택해주세요. <br /> <br />
-          5. 서비스 명은 "단풍별", 개발환경은 "WEB", 설명은 "스타포스 정보
-          확인용" 이라고 입력해주세요. <br />
-          URL은 "https://danpungstar.com/" 이라고 입력해주세요. <br /> <br />
+          5. 서비스 명은 &quot;단풍별&quot;, 개발환경은 &quot;WEB&quot;, 설명은
+          &quot;스타포스 정보 확인용&quot; 이라고 입력해주세요. <br />
+          URL은 &quot;https://danpungstar.com/&quot; 이라고 입력해주세요. <br />{' '}
+          <br />
           6. 약관 동의 후 등록 해주세요. <br /> <br />
           <Image
             src='https://res.cloudinary.com/dazzvmx3y/image/upload/v1706447699/e6tpnfy31xvqlav1stij.png'
