@@ -6,10 +6,7 @@ import ContentPanel from './components/ContentPanel';
 export default function Page() {
   return (
     <div className='flex flex-col h-full'>
-      <section
-        label='searchArea'
-        className='flex bg-custom bg-fixed bg-cover w-full pb-5'
-      >
+      <section className='flex bg-custom bg-fixed bg-cover w-full pb-5'>
         <div className='pt-10 pl-10 pr-10 min-w-[400px] sm:hidden block ml-10'>
           <AvatarPanel />
         </div>
@@ -22,10 +19,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section
-        label='contentArea'
-        className='bg-n1 flex flex-col lg:min-h-[700px] w-full'
-      >
+      <section className='bg-n1 flex flex-col lg:min-h-[700px] w-full'>
         <div className='px-[80px] sm:px-[15px] py-[36.96px] w-full'>
           <ContentPanel />
         </div>
