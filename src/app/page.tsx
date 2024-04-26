@@ -19,11 +19,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className='bg-n1 flex flex-col lg:min-h-[700px] w-full'>
-        <div className='px-[80px] sm:px-[15px] py-[36.96px] w-full'>
-          <ContentPanel />
-        </div>
-      </section>
     </div>
   );
 }

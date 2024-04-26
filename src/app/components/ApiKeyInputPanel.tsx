@@ -10,6 +10,7 @@ import {
 } from '../lib/util/starforceUtility';
 import { useLoading } from '../context/loadingContext';
 import { useContentError } from '../context/contentErrorContext';
+import { useRouter } from 'next/navigation';
 
 export default function ApiKeyInputPanel() {
   const [text, setText] = useState('');
@@ -21,6 +22,7 @@ export default function ApiKeyInputPanel() {
   const [starforceInfoArray, setStarforceInfoArray] = useStarforceInfoArray();
   const [isLoading, setIsLoading] = useLoading();
   const [errorText, setErrorText] = useContentError();
+  const router = useRouter();
   const onClickSubmit = useCallback(
     async (value) => {
       if (value === undefined || value === '') {
@@ -87,6 +89,7 @@ export default function ApiKeyInputPanel() {
         finalStartDate: userInfo.startDate,
         finalEndDate: userInfo.endDate,
       }));
+      router.push('/result');
     },
     [userInfo]
   );
