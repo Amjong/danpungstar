@@ -1,7 +1,5 @@
 import PeriodSelectPanel from './components/PeriodSelectPanel';
 import ApiKeyInputPanel from './components/ApiKeyInputPanel';
-import AvatarPanel from './components/AvatarPanel';
-import ContentPanel from './components/ContentPanel';
 
 export default function Page() {
   return (

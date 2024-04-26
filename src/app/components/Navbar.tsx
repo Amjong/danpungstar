@@ -20,24 +20,20 @@ export default function Navbar() {
       <div className='flex w-full justify-end sm:justify-start gap-[36px] px-10 relative translate-x-[-50px] sm:translate-x-[0px] py-[15px]'>
         <div
           className={`font-regular ${
-            menu === 0
-              ? 'text-y4 underline-offset-4 font-extrabold underline'
-              : 'text-white font-medium'
+            menu === 0 ? 'text-y4 font-extrabold' : 'text-white font-medium'
           } relative w-fit mt-[-1.00px] text-center tracking-[0] leading-[normal] whitespace-nowrap`}
         >
           <Link href='/' className='text-xl' onClick={() => setMenu(0)}>
-            스타포스
+            홈
           </Link>
         </div>
         <div
           className={`font-regular ${
-            menu === 1
-              ? 'text-y4 underline-offset-4 font-extrabold underline'
-              : 'text-white font-medium'
+            menu === 1 ? 'text-y4 font-extrabold' : 'text-white font-medium'
           } relative w-fit mt-[-1.00px] text-center tracking-[0] leading-[normal] whitespace-nowrap`}
         >
-          <Link href='/guide' className='text-xl' onClick={() => setMenu(1)}>
-            서비스가이드
+          <Link href='/result' className='text-xl' onClick={() => setMenu(1)}>
+            스타포스
           </Link>
         </div>
       </div>
