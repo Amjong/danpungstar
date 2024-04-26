@@ -7,9 +7,6 @@ export default function Page() {
   return (
     <div className='flex flex-col h-full'>
       <section className='flex bg-custom bg-fixed bg-cover w-full pb-5'>
-        <div className='pt-10 pl-10 pr-10 min-w-[400px] sm:hidden block ml-10'>
-          <AvatarPanel />
-        </div>
         <div className='flex flex-col mt-10 sm:mt-5 w-full sm:flex-col-reverse sm:px-[15px]'>
           <div>
             <ApiKeyInputPanel />
