@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function ApiKeyGuidePanel() {
   return (
-    <div className='bg-black'>
+    <div>
       <div className='font-bold text-white'>
         <div className='mb-1'>총 1 ~ 2분 정도 소요됩니다.</div>
         <div className='text-r2 mb-10'>
