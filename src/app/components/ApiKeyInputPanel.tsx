@@ -119,19 +119,19 @@ export default function ApiKeyInputPanel() {
         </DialogContent>
       </Dialog>
       <Dialog open={errorText !== ''} onOpenChange={onOpenChange}>
-        <DialogContent>
+        <DialogContent className='bg-n2'>
           <div className='font-bold'>{errorText}</div>
         </DialogContent>
       </Dialog>
-      <div className='flex flex-row gap-2 items-center mt-3 w-full shrink'>
+      <div className='flex flex-row gap-3 items-center mt-3 w-full shrink'>
         <input
           placeholder='넥슨 OPEN API 사이트에서 발급받은 API Key 값을 입력해주세요.'
           value={text}
           onChange={handleChange}
           type='password'
-          className='xl:w-3/5 w-4/5 min-w-[300px] h-[46px] max-w-[1200px] bg-white rounded-[10px] focus:outline-y4 text-center font-regular'
+          className='w-[70%] min-w-[300px] h-[46px] bg-white rounded-[10px] focus:outline-y4 text-center font-regular'
         />
-        <div className='flex flex-row gap-2 items-center'>
+        <div className='flex flex-row gap-3 items-center w-[15%]'>
           <MasterPrimaryButton
             text='조회'
             onClick={() => onClickSubmit(text)}
