@@ -27,8 +27,11 @@ export default function ApiKeyInputPanel() {
   const [isLoading, setIsLoading] = useLoading();
   const [errorText, setErrorText] = useContentError();
   const router = useRouter();
-  const onOpenChange = (open: boolean) => {
+  const onErrorDialogOpenChange = (open: boolean) => {
     if (!open) setErrorText('');
+  };
+  const onLoadingDialogOpenChange = (open: boolean) => {
+    if (!open) setIsLoading(false);
   };
   const onClickSubmit = useCallback(
     async (value) => {
@@ -119,9 +122,19 @@ export default function ApiKeyInputPanel() {
           <ApiKeyGuidePanel />
         </DialogContent>
       </Dialog>
-      <Dialog open={errorText !== ''} onOpenChange={onOpenChange}>
+      <Dialog open={errorText !== ''} onOpenChange={onErrorDialogOpenChange}>
         <DialogContent className='bg-n2'>
           <div className='font-bold'>{errorText}</div>
+        </DialogContent>
+      </Dialog>
+      <Dialog
+        open={isLoading && errorText === ''}
+        onOpenChange={onLoadingDialogOpenChange}
+      >
+        <DialogContent className='bg-n2'>
+          <div className='font-bold'>
+            데이터 조회 중입니다. 잠시만 기다려 주세요.
+          </div>
         </DialogContent>
       </Dialog>
       <div className='flex flex-row gap-3 items-center mt-3 w-full shrink'>
