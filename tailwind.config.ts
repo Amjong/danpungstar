@@ -1,15 +1,12 @@
 import type { Config } from 'tailwindcss';
 
-const { searchBgSrc } = require('./src/app/data/image/encodedImage');
-const defaultTheme = require('tailwindcss/defaultTheme');
-
 const config: Config = {
   darkMode: ['class'],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './pages/**/*.{js,jsx,ts,tsx}',
+    './components/**/*.{js,jsx,ts,tsx}',
+    './app/**/*.{js,jsx,ts,tsx}',
+    './src/**/*.{js,jsx,ts,tsx}',
   ],
   safelist: ['bg-r2'],
   prefix: '',
@@ -97,7 +94,6 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        custom: `url(${searchBgSrc})`,
         fixed: 'fixed',
         cover: 'cover',
       },

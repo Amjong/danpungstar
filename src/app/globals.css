@@ -35,6 +35,7 @@ html {
   }
 }
 
+/* apply the font globally */
 body {
   font-family: 'NexonGothicBold', 'NexonGothicRegular'; /* use the font-family you specified in @font-face */
   .react-datepicker {
@@ -59,6 +60,10 @@ body {
           color: #ffffff;
         }
       }
+    }
+
+    .react-datepicker__input-container {
+      border: 2px solid white;
     }
 
     .react-datepicker__day {
@@ -97,6 +102,7 @@ body {
 body > iframe {
   display: none;
 }
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
