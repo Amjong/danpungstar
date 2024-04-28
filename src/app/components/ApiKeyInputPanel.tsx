@@ -13,7 +13,6 @@ import { useContentError } from '../context/contentErrorContext';
 import { useRouter } from 'next/navigation';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import ApiKeyGuidePanel from './ApiKeyGuidePanel';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 
 export default function ApiKeyInputPanel() {
@@ -27,6 +26,9 @@ export default function ApiKeyInputPanel() {
   const [isLoading, setIsLoading] = useLoading();
   const [errorText, setErrorText] = useContentError();
   const router = useRouter();
+  const onOpenChange = (open: boolean) => {
+    if (!open) setErrorText('');
+  };
   const onClickSubmit = useCallback(
     async (value) => {
       if (value === undefined || value === '') {
@@ -110,10 +112,15 @@ export default function ApiKeyInputPanel() {
       <span className='text-white font-bold text-xl'>API Key 입력 가이드 </span>
       <Dialog>
         <DialogTrigger asChild>
-          <OpenInNewIcon />
+          <OpenInNewIcon className='cursor-pointer' color='primary' />
         </DialogTrigger>
         <DialogContent className='flex w-full overflow-y-auto h-screen bg-n1'>
           <ApiKeyGuidePanel />
+        </DialogContent>
+      </Dialog>
+      <Dialog open={errorText !== ''} onOpenChange={onOpenChange}>
+        <DialogContent>
+          <div className='font-bold'>{errorText}</div>
         </DialogContent>
       </Dialog>
       <div className='flex flex-row gap-2 items-center mt-3 w-full shrink'>
