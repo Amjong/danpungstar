@@ -11,13 +11,9 @@ const config: Config = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
+  safelist: ['bg-r2'],
   prefix: '',
   theme: {
-    screens: {
-      ...defaultTheme.screens,
-      sm: { max: '480px' },
-      // => @media (max-width: 480px) { ... }
-    },
     container: {
       center: true,
       padding: '2rem',
