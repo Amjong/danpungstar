@@ -72,37 +72,33 @@ export default function PeriodSelectPanel() {
           />
         </div>
       </div>
-      <div className='flex flex-row translate-x-[11px] mt-5 sm:flex-col flex-wrap'>
+      <div className='flex flex-row translate-x-[11px] mt-5 flex-wrap'>
         <div className='min-x-[182px]'>
           <RadioBtns onSelect={onSelect} />
         </div>
         {isPeriod && (
           <div className='flex gap-5'>
-            <div className='sm:w-1/2'>
-              <MyCalendar
-                selected={startDate}
-                onChange={(date) => {
-                  setStartDate(date);
-                  setUserInfo((prev) => ({
-                    ...prev,
-                    startDate: date.toISOString().slice(0, 10),
-                  }));
-                }}
-                minDate={new Date('2023-12-27')}
-                placeholderText='시작일'
-              />
-            </div>
-            <div className='sm:w-1/2'>
-              <MyCalendar
-                selected={endDate}
-                onChange={onChangeEnd}
-                minDate={new Date('2023-12-27')}
-                maxDate={new Date(startDate).setFullYear(
-                  startDate.getFullYear() + 1
-                )}
-                placeholderText='종료일'
-              />
-            </div>
+            <MyCalendar
+              selected={startDate}
+              onChange={(date) => {
+                setStartDate(date);
+                setUserInfo((prev) => ({
+                  ...prev,
+                  startDate: date.toISOString().slice(0, 10),
+                }));
+              }}
+              minDate={new Date('2023-12-27')}
+              placeholderText='시작일'
+            />
+            <MyCalendar
+              selected={endDate}
+              onChange={onChangeEnd}
+              minDate={new Date('2023-12-27')}
+              maxDate={new Date(startDate).setFullYear(
+                startDate.getFullYear() + 1
+              )}
+              placeholderText='종료일'
+            />
           </div>
         )}
       </div>

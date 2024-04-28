@@ -6,9 +6,9 @@ import Image from 'next/image';
 export default function Navbar() {
   const [menu, setMenu] = useState(0);
   return (
-    <header className='flex sm:flex-col w-full bg-n1 items-center sm:items-start z-10 h-[45px] sm:h-[120px]'>
+    <header className='flex w-full bg-n1 items-center z-10 h-[45px]'>
       <div className='ml-10 flex h-full mt-2'>
-        <Link href='/' className='sm:h-full z-50 items-center justify-center'>
+        <Link href='/' className='z-50 items-center justify-center'>
           <Image
             src='https://res.cloudinary.com/dazzvmx3y/image/upload/v1707321384/yod18wgalszlirkkjzvn.png'
             width={129}
@@ -17,7 +17,7 @@ export default function Navbar() {
           />
         </Link>
       </div>
-      <div className='flex w-full justify-end sm:justify-start gap-[36px] px-10 relative translate-x-[-50px] sm:translate-x-[0px] py-[15px]'>
+      <div className='flex w-full justify-end gap-[36px] px-10 relative translate-x-[-50px] py-[15px]'>
         <div
           className={`font-regular ${
             menu === 0 ? 'text-y4 font-extrabold' : 'text-white font-medium'

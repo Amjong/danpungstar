@@ -33,11 +33,11 @@ export default function ContentPanel() {
     setMenu(value);
   };
   return (
-    <div className='w-full h-full sm:px-[15px] overflow-auto'>
+    <div className='w-full h-full overflow-auto'>
       <TapBtns onChanged={handleChange} tabBtnsArray={contentArray} />
       <div className='mt-10'>
         {errorText !== '' && (
-          <div className='mt-20 font-bold text-white text-center text-xl sm:text-[19px]'>
+          <div className='mt-20 font-bold text-white text-center text-xl'>
             {errorText}
           </div>
         )}
@@ -46,8 +46,8 @@ export default function ContentPanel() {
           menu !== 2 &&
           !isLoading &&
           starforceInfoArray.length === 0 && (
-            <div className='text-xl font-bold text-center sm:text-start sm:mx-5 sm:text-[19px] text-white mt-20'>
-              API KEY 값을 입력 해주세요. <br className='hidden sm:inline' />
+            <div className='text-xl font-bold text-center text-white mt-20'>
+              API KEY 값을 입력 해주세요.
               <Link
                 href='/guide'
                 className='text-r2 underline underline-offset-4'

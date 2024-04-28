@@ -2,15 +2,9 @@ import Image from 'next/image';
 
 export default function ApiKeyGuidePanel() {
   return (
-    <div>
-      <Image
-        className='hidden sm:block w-full h-full'
-        src='https://res.cloudinary.com/dazzvmx3y/image/upload/v1707318285/kojl2adkvbvi08gmonra.png'
-        alt='mobileguide'
-        fill={true}
-      />
-      <div className='p-20 font-bold text-white sm:hidden'>
-        <div className='mb-10'>총 1 ~ 2분 정도 소요됩니다.</div>
+    <div className='bg-black'>
+      <div className='font-bold text-white'>
+        <div className='mb-1'>총 1 ~ 2분 정도 소요됩니다.</div>
         <div className='text-r2 mb-10'>
           *유의사항 <br />
           메이플 ID는 API Key 발급을 받을 수 없습니다. 넥슨 아이디로 로그인
@@ -33,8 +27,8 @@ export default function ApiKeyGuidePanel() {
           2. 애플리케이션 등록 을 클릭 해주세요. <br /> <br />
           <Image
             src='https://res.cloudinary.com/dazzvmx3y/image/upload/v1706447718/rf4iebw6cjppfatokcqv.png'
-            width={800}
-            height={240}
+            width={1200}
+            height={600}
             alt='guide1'
           ></Image>
         </div>
@@ -49,8 +43,8 @@ export default function ApiKeyGuidePanel() {
           <Image
             src='https://res.cloudinary.com/dazzvmx3y/image/upload/v1706447699/e6tpnfy31xvqlav1stij.png'
             alt='guide2'
-            width={800}
-            height={560}
+            width={1200}
+            height={600}
           />
         </div>
         <div>
@@ -61,8 +55,8 @@ export default function ApiKeyGuidePanel() {
           <Image
             src='https://res.cloudinary.com/dazzvmx3y/image/upload/v1706447710/gnlczwap9h3jaqfnmfbp.png'
             alt='guide3'
-            width={800}
-            height={560}
+            width={1200}
+            height={600}
           />
         </div>
       </div>

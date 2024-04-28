@@ -11,6 +11,10 @@ import {
 import { useLoading } from '../context/loadingContext';
 import { useContentError } from '../context/contentErrorContext';
 import { useRouter } from 'next/navigation';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import ApiKeyGuidePanel from './ApiKeyGuidePanel';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 
 export default function ApiKeyInputPanel() {
   const [text, setText] = useState('');
@@ -102,9 +106,17 @@ export default function ApiKeyInputPanel() {
     setText(localStorage.getItem('apiKey'));
   }, []);
   return (
-    <div className='mb-10 w-full'>
-      <StarTextArea text='API KEY 값' />
-      <div className='flex flex-row sm:flex-col gap-2 items-center mt-3 w-full shrink'>
+    <div className='mb-10 w-full h-full'>
+      <span className='text-white font-bold text-xl'>API Key 입력 가이드 </span>
+      <Dialog>
+        <DialogTrigger asChild>
+          <OpenInNewIcon />
+        </DialogTrigger>
+        <DialogContent className='flex w-full overflow-y-auto h-screen bg-n1'>
+          <ApiKeyGuidePanel />
+        </DialogContent>
+      </Dialog>
+      <div className='flex flex-row gap-2 items-center mt-3 w-full shrink'>
         <input
           placeholder='넥슨 OPEN API 사이트에서 발급받은 API Key 값을 입력해주세요.'
           value={text}

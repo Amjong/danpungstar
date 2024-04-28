@@ -240,7 +240,7 @@ export default function UsedMesoPanel() {
       {errorText === '' && isLoading && <TableSkeleton />}
       {errorText === '' && !isLoading && itemsAndCost && (
         <div>
-          <div className='mb-5 mt-10 text-[24px] sm:text-[19px] flex flex-col'>
+          <div className='mb-5 mt-10 text-[24px] flex flex-col'>
             <span className='mr-2 flex gap-2 items-center'>
               <MasterToolTip
                 text='130레벨 이상의 아이템만 지원합니다.
@@ -266,7 +266,7 @@ export default function UsedMesoPanel() {
               <span className='font-regular text-white'>메소 입니다.</span>
             </div>
           </div>
-          <div className='flex justify-end sm:justify-start mb-5'>
+          <div className='flex justify-end mb-5'>
             <MasterPrimaryButton
               text='이미지 복사'
               color='r2'

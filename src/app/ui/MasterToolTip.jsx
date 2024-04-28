@@ -15,7 +15,7 @@ export default function MasterToolTip({ text, placement }) {
   return (
     <div>
       <ClickAwayListener onClickAway={handleTooltipClose}>
-        <div className='hidden sm:block'>
+        <div className='hidden'>
           <Tooltip
             title={text}
             placement='bottom'
@@ -36,7 +36,7 @@ export default function MasterToolTip({ text, placement }) {
           </Tooltip>
         </div>
       </ClickAwayListener>
-      <div className='hover:cursor-pointer sm:hidden'>
+      <div className='hover:cursor-pointer'>
         <Tooltip title={text} placement={placement}>
           <InfoOutlinedIcon fontSize='medium' sx={{ color: '#FFE380' }} />
         </Tooltip>

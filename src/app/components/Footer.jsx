@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className='w-full bottom-0 bg-n2 flex flex-col justify-center gap-[10px] h-[100px] sm:h-[140px] flex-wrap'>
+    <footer className='w-full bottom-0 bg-n2 flex flex-col justify-center gap-[10px] h-[100px] flex-wrap'>
       <p className='px-[25px] relative self-stretch font-bold text-white text-lg tracking-[0] leading-[normal]'>
         <span className='font-regular text-white text-lg tracking-[0]'>
           ⓒ 2024 danpungbyeol All rights reserved.
