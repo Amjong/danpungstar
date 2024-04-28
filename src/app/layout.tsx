@@ -64,7 +64,7 @@ export default function RootLayout({
       className={`${nexonBoldFont.variable} ${nexonRegularFont.variable}`}
     >
       <body>
-        <div className='leading-loose overflow-hidden max-w-screen-2xl'>
+        <div className='leading-loose overflow-hidden max-w-screen-2xl bg-n1'>
           <StarforceProvider>
             <UserInfoProvider>
               <LoadingProvider>

@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Navbar() {
   const [menu, setMenu] = useState(0);
   return (
-    <header className='flex w-full bg-n1 items-center z-10 h-[45px]'>
+    <header className='flex w-full bg-n1 items-center z-10 h-[45px] mt-3'>
       <div className='ml-10 flex h-full mt-2'>
         <Link href='/' className='z-50 items-center justify-center'>
           <Image
