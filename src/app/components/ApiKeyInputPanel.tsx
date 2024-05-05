@@ -1,38 +1,24 @@
 'use client';
-import React, { useCallback, useEffect, useState } from 'react';
-import StarTextArea from '../ui/StarTextArea';
-import { MasterPrimaryButton } from '../ui/MasterPrimaryButton';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useStarforceInfoArray } from '../context/starforceInfoContext';
 import { useUserInfo } from '../context/userInfoContext';
+import { useLoading } from '../context/loadingContext';
+import { useContentError } from '../context/contentErrorContext';
+import { useRouter } from 'next/navigation';
 import {
   getRepresentativeCharacter,
   getStarForceInfoByDate,
 } from '../lib/util/starforceUtility';
-import { useLoading } from '../context/loadingContext';
-import { useContentError } from '../context/contentErrorContext';
-import { useRouter } from 'next/navigation';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import ApiKeyGuidePanel from './ApiKeyGuidePanel';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import Link from 'next/link';
+import ApiKeyDialog from './ApiKeyDialog';
+import ApiKeyForm from './ApiKeyForm';
 
 export default function ApiKeyInputPanel() {
-  const [text, setText] = useState('');
-  const handleChange = (e) => {
-    e.preventDefault();
-    setText(e.target.value);
-  };
   const [userInfo, setUserInfo] = useUserInfo();
   const [starforceInfoArray, setStarforceInfoArray] = useStarforceInfoArray();
   const [isLoading, setIsLoading] = useLoading();
   const [errorText, setErrorText] = useContentError();
   const router = useRouter();
-  const onErrorDialogOpenChange = (open: boolean) => {
-    if (!open) setErrorText('');
-  };
-  const onLoadingDialogOpenChange = (open: boolean) => {
-    if (!open) setIsLoading(false);
-  };
+
   const onClickSubmit = useCallback(
     async (value) => {
       if (value === undefined || value === '') {
@@ -104,68 +90,23 @@ export default function ApiKeyInputPanel() {
     [userInfo]
   );
   const onClickReset = useCallback(() => {
-    setText('');
-    localStorage.removeItem('apiKey');
+    // setText('');
+    // localStorage.removeItem('apiKey');
   }, []);
-  useEffect(() => {
-    if (localStorage.getItem('apiKey') === null) return;
-    setText(localStorage.getItem('apiKey'));
-  }, []);
+
+  // useEffect(() => {
+  //   if (localStorage.getItem('apiKey') === null) return;
+  //   setText(localStorage.getItem('apiKey'));
+  // }, []);
   return (
     <div className='mb-10 w-full h-full'>
-      <span className='text-white font-bold text-xl'>API Key 입력 가이드 </span>
-      <Dialog>
-        <DialogTrigger asChild>
-          <OpenInNewIcon className='cursor-pointer' color='primary' />
-        </DialogTrigger>
-        <DialogContent className='flex w-full overflow-y-auto h-screen bg-n1'>
-          <ApiKeyGuidePanel />
-        </DialogContent>
-      </Dialog>
-      <Dialog open={errorText !== ''} onOpenChange={onErrorDialogOpenChange}>
-        <DialogContent className='bg-n2'>
-          <div className='font-bold'>{errorText}</div>
-        </DialogContent>
-      </Dialog>
-      <Dialog
-        open={isLoading && errorText === ''}
-        onOpenChange={onLoadingDialogOpenChange}
-      >
-        <DialogContent className='bg-n2'>
-          <div className='font-bold'>
-            데이터 조회 중입니다. 잠시만 기다려 주세요.
-          </div>
-        </DialogContent>
-      </Dialog>
-      <div className='flex flex-row gap-3 items-center mt-3 w-full shrink'>
-        <div className='w-[70%] relative'>
-          <input
-            placeholder='넥슨 OPEN API 사이트에서 발급받은 API Key 값을 입력해주세요.'
-            value={text}
-            onChange={handleChange}
-            type='password'
-            className='w-full min-w-[300px] h-[46px] bg-white rounded-[10px] focus:outline-y4 text-start px-5 font-regular'
-          />
-          <Link
-            href='https://openapi.nexon.com/'
-            className='absolute bg-black text-white font-bold text-[12px] rounded-[30px] w-[22%] h-[40px] right-0 my-1 mx-1 whitespace-nowrap text-center leading-[40px]'
-          >
-            넥슨 OPEN API 바로가기
-          </Link>
-        </div>
-        <div className='flex flex-row gap-3 items-center w-[15%]'>
-          <MasterPrimaryButton
-            text='조회'
-            onClick={() => onClickSubmit(text)}
-            color='r2'
-          />
-          <MasterPrimaryButton
-            text='초기화'
-            onClick={onClickReset}
-            color='n2'
-          />
-        </div>
-      </div>
+      <ApiKeyDialog
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
+        errorText={errorText}
+        setErrorText={setErrorText}
+      />
+      <ApiKeyForm onClickSubmit={onClickSubmit} onClickReset={onClickReset} />
     </div>
   );
 }
