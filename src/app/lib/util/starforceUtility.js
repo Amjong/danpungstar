@@ -84,33 +84,6 @@ const getStarForceInfo = async (apikey, dateString) => {
   }
 };
 
-const getStarForceInfoByDate = async (
-  apikey,
-  startDateString,
-  endDateString
-) => {
-  const startDate = new Date(startDateString);
-  const endDate = new Date(endDateString);
-  if (startDate > endDate) {
-    alert('시작 날짜는 종료 날짜보다 빠를 수 없습니다. 다시 시도해주세요!');
-    return;
-  }
-
-  let starforceHistoryArray = [];
-
-  while (startDate <= endDate) {
-    const currentDateArray = await getStarForceInfo(
-      apikey,
-      startDate.toISOString().slice(0, 10)
-    );
-    starforceHistoryArray = starforceHistoryArray.concat(currentDateArray);
-    // TODO : exception handling
-    startDate.setDate(startDate.getDate() + 1);
-  }
-
-  return starforceHistoryArray;
-};
-
 const applyStarforceEventList = (eventListArray, currentCost) => {
   if (!eventListArray) {
     return currentCost;
@@ -310,6 +283,5 @@ module.exports = {
   calculateCostForEachItemsFromArray,
   getStarforceResultInfo,
   getStarforceProgressInfo,
-  getStarForceInfoByDate,
   getRepresentativeCharacter,
 };
