@@ -45,6 +45,7 @@ export default function ApiKeyForm({ onClickSubmit, onClickReset }: props) {
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className='flex flex-row gap-3 mt-3 w-full shrink'
+        method='post'
       >
         <div className='w-[70%] relative'>
           <FormField
