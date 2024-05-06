@@ -70,6 +70,7 @@ export default function ApiKeyForm({ onClickSubmit, onClickReset }: props) {
         <Link
           href='https://openapi.nexon.com/'
           className='absolute bg-black text-white font-bold text-[12px] rounded-[30px] w-[22%] h-[40px] left-[45%] whitespace-nowrap text-center leading-[40px] mt-1'
+          target='_blank'
         >
           넥슨 OPEN API 바로가기
         </Link>
