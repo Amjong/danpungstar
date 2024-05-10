@@ -17,6 +17,18 @@ const getStarForceUrl = (count, date, cursor) => {
   return starForceUrl;
 };
 
+const getCharacterItemEquipmentUrl = (ocid, date) => {
+  const characterItemEquipmentUrl = '/maplestory/v1/character/item-equipment';
+  if (!ocid) {
+    console.log('ocid is required');
+    return undefined;
+  }
+  let characterBasicInfoUrl = openApiBaseUrl + characterItemEquipmentUrl + '?';
+  characterBasicInfoUrl += `&ocid=${ocid}`;
+  characterBasicInfoUrl += `&date=${date}`;
+  return characterBasicInfoUrl;
+};
+
 const getCharacterBasicInfoUrl = (ocid, date) => {
   const characterBasicInfoBaseUrl = '/maplestory/v1/character/basic';
   if (!ocid) {
@@ -34,7 +46,7 @@ const getCharacterBasicInfo = async (ocid, date) => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'x-nxopen-api-key': process.env.REACT_APP_MAPLE_API_KEY,
+      'x-nxopen-api-key': process.env.NEXT_PUBLIC_MAPLE_API_KEY,
     },
   });
 
@@ -69,11 +81,12 @@ const getOcidUrl = (nickname) => {
 };
 
 const getOcidFromNickname = async (nickname) => {
+  console.log(process.env.NEXT_PUBLIC_MAPLE_API_KEY);
   const response = await fetch(getOcidUrl(nickname), {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'x-nxopen-api-key': process.env.REACT_APP_MAPLE_API_KEY,
+      'x-nxopen-api-key': process.env.NEXT_PUBLIC_MAPLE_API_KEY,
     },
   });
 
@@ -90,4 +103,5 @@ module.exports = {
   getOcidUrl,
   getOcidFromNickname,
   getCharacterBasicInfo,
+  getCharacterItemEquipmentUrl,
 };

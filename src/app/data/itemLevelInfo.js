@@ -548,6 +548,11 @@ const getItemLevelFromTable = (name) => {
   return itemLevelTable[name];
 };
 
+const getTable = () => {
+  return itemLevelTable;
+};
+
 module.exports = {
   getItemLevelFromTable,
+  getTable,
 };

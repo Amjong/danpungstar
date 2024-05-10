@@ -3,7 +3,10 @@ const {
   getStarForceUrl,
   getOcidFromNickname,
   getCharacterBasicInfo,
+  getCharacterItemEquipmentUrl,
 } = require('./openApiManager');
+
+const { items } = require('../../data/itemInfo');
 
 /* TODO : Save static table for each level&starforceCount to optimizing */
 const calculateCost = (Itemlevel, starforceCount, date) => {
@@ -52,6 +55,52 @@ const getSuccessRate = (starforceCount) => {
   } else if (starforceCount < 25) {
     return 2 / 100;
   } else return 1 / 100;
+};
+
+const getItemEquipmentInfo = async (nickname) => {
+  console.log(`${nickname} 조회 시작`);
+  const ocidResponse = await getOcidFromNickname(nickname);
+  const ocid = ocidResponse.ocid;
+  console.log(ocid);
+  const response = await fetch(
+    getCharacterItemEquipmentUrl(ocid, '2024-05-05'),
+    {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-nxopen-api-key': process.env.NEXT_PUBLIC_MAPLE_API_KEY,
+      },
+    }
+  );
+
+  console.log(`${nickname} 데이터 받아옴`);
+
+  if (!response.ok) {
+    throw new Error(response.status);
+  }
+
+  const finalResponse = await response.json();
+  finalResponse.item_equipment.forEach((element) => {
+    const name = element.item_name;
+    items.forEach((item) => {
+      if (item.name === name) {
+        item.imageUrl = element.item_icon;
+        console.log(`${item.name} -> ${item.imageUrl}`);
+      }
+    });
+  });
+
+  console.log(`${nickname} 데이터 파싱 완료`);
+};
+
+const printItems = () => {
+  items.forEach((element) => {
+    console.log(`{
+      name: '${element.name}',
+      level: ${element.level},
+      imageUrl: '${element.imageUrl}',
+    },`);
+  });
 };
 
 const getStarForceInfo = async (apikey, dateString) => {
@@ -284,4 +333,6 @@ module.exports = {
   getStarforceResultInfo,
   getStarforceProgressInfo,
   getRepresentativeCharacter,
+  getItemEquipmentInfo,
+  printItems,
 };
