@@ -282,7 +282,7 @@ export default function UsedMesoPanel() {
               data={itemsAndCost.map((element) => {
                 let convertedKey = element[0].split('|');
                 return {
-                  item: convertedKey[0],
+                  item: convertedKey[0] + ' ' + convertedKey[2],
                   character: convertedKey[1],
                   meso: element[1],
                 };
