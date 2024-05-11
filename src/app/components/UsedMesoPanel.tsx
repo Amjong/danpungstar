@@ -11,6 +11,7 @@ import MasterToolTip from '../ui/MasterToolTip';
 import { useCapture } from '../lib/hooks/useCapture';
 import { MasterPrimaryButton } from '../ui/MasterPrimaryButton';
 import MasterSnackBar from '../ui/MasterSnackBar';
+import ImageCard from '../ui/ImageCard';
 
 const formatNumberToKorean = (num) => {
   const units = ['', '만', '억', '조'];
@@ -155,7 +156,7 @@ function Table({ columns, data }) {
                   <td
                     {...cell.getCellProps()}
                     key={cell.key}
-                    className={`px-6 py-4 whitespace-nowrap text-sm text-white font-regular border-1 border-b border-white ${
+                    className={`px-6 h-full py-10 whitespace-nowrap text-sm text-white font-regular border-1 border-b border-white ${
                       i % 2 === 0 ? 'bg-n2' : 'bg-n1'
                     }`}
                   >
@@ -280,9 +281,18 @@ export default function UsedMesoPanel() {
             <Table
               columns={columns}
               data={itemsAndCost.map((element) => {
-                let convertedKey = element[0].split('|');
+                let convertedKey: string = element[0].split('|');
                 return {
-                  item: convertedKey[0] + ' ' + convertedKey[2],
+                  item: (
+                    <div className='flex flex-col justify-center items-center'>
+                      {convertedKey[0]}
+                      <ImageCard
+                        imageUrl={convertedKey[2]}
+                        width={50}
+                        height={57}
+                      />
+                    </div>
+                  ),
                   character: convertedKey[1],
                   meso: element[1],
                 };
