@@ -1,4 +1,4 @@
-const { getItemLevelFromTable } = require('../../data/itemLevelInfo');
+const { getItemsMap } = require('../../data/ItemInfo');
 const {
   getStarForceUrl,
   getOcidFromNickname,
@@ -107,10 +107,12 @@ const calculateCostForEachItemsFromArray = (starforceInfoArray) => {
 
   starforceInfoArray.forEach((element) => {
     let currentCost = 0;
-    let itemLevel = getItemLevelFromTable(element.target_item);
-    if (itemLevel === undefined) {
+    const itemsMap = getItemsMap();
+    if (!itemsMap.has(element.target_item)) {
       return;
     }
+    let itemLevel = itemsMap.get(element.target_item).level;
+    let itemImageUrl = itemsMap.get(element.target_item).imageUrl;
     let originalCost = calculateCost(
       itemLevel,
       element.before_starforce_count,
@@ -129,6 +131,7 @@ const calculateCostForEachItemsFromArray = (starforceInfoArray) => {
     let currentKey = [
       element.target_item,
       `${element.world_name}/${element.character_name}`,
+      itemImageUrl,
     ].join('|');
 
     if (!itemsAndCost.has(currentKey)) {
