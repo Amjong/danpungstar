@@ -8,99 +8,124 @@ type Item = {
 
 const items: Item[] = [
   {
+    name: '컴플리트 언더컨트롤',
+    level: 200,
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEJFJHHE.png',
+  },
+  {
     name: '에스텔라 이어링',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPBJENB.png',
   },
   {
     name: '트와일라이트 마크',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJALG.png',
   },
   {
     name: '데이브레이크 펜던트',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJDKC.png',
   },
   {
     name: '여명의 가디언 엔젤 링',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEODIEPH.png',
   },
   {
     name: '이글아이 던위치로브',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJFLE.png',
   },
   {
     name: '트릭스터 던위치팬츠',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJGIH.png',
   },
   {
     name: '하이네스 던위치햇',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCIAHJ.png',
   },
   {
     name: '이글아이 어새신셔츠',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJFLG.png',
   },
   {
     name: '트릭스터 어새신팬츠',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJGIJ.png',
   },
   {
     name: '하이네스 어새신보닛',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCIPOB.png',
   },
   {
     name: '이글아이 레인져후드',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJFLH.png',
   },
   {
     name: '트릭스터 레인져팬츠',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJGIG.png',
   },
   {
     name: '하이네스 레인져베레',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCIAHI.png',
   },
   {
     name: '이글아이 원더러코트',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJFLJ.png',
   },
   {
     name: '트릭스터 원더러팬츠',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJGII.png',
   },
   {
     name: '하이네스 원더러햇',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCIPOA.png',
   },
   {
     name: '이글아이 워리어아머',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJFLF.png',
   },
   {
     name: '트릭스터 워리어팬츠',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJGIE.png',
   },
   {
     name: '하이네스 워리어헬름',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCIAHG.png',
   },
   {
     name: '파프니르 미스틸테인',
@@ -265,17 +290,20 @@ const items: Item[] = [
   {
     name: '아케인셰이드 메이지글러브',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBHH.png',
   },
   {
     name: '아케인셰이드 메이지숄더',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGHG.png',
   },
   {
     name: '아케인셰이드 메이지슈즈',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIGLI.png',
   },
   {
     name: '아케인셰이드 메이지슈트',
@@ -285,7 +313,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 메이지케이프',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJOKA.png',
   },
   {
     name: '아케인셰이드 메이지햇',
@@ -295,17 +324,20 @@ const items: Item[] = [
   {
     name: '아케인셰이드 나이트글러브',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBHE.png',
   },
   {
     name: '아케인셰이드 나이트숄더',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGHH.png',
   },
   {
     name: '아케인셰이드 나이트슈즈',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIGLJ.png',
   },
   {
     name: '아케인셰이드 나이트슈트',
@@ -315,7 +347,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 나이트케이프',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJOKB.png',
   },
   {
     name: '아케인셰이드 나이트햇',
@@ -325,17 +358,20 @@ const items: Item[] = [
   {
     name: '아케인셰이드 시프글러브',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBHJ.png',
   },
   {
     name: '아케인셰이드 시프숄더',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGHI.png',
   },
   {
     name: '아케인셰이드 시프슈즈',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIGIA.png',
   },
   {
     name: '아케인셰이드 시프슈트',
@@ -345,27 +381,32 @@ const items: Item[] = [
   {
     name: '아케인셰이드 시프케이프',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJOKC.png',
   },
   {
     name: '아케인셰이드 시프햇',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCPPPA.png',
   },
   {
     name: '아케인셰이드 아처글러브',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBHG.png',
   },
   {
     name: '아케인셰이드 아처숄더',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGHJ.png',
   },
   {
     name: '아케인셰이드 아처슈즈',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIGIB.png',
   },
   {
     name: '아케인셰이드 아처슈트',
@@ -375,7 +416,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 아처케이프',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJOKD.png',
   },
   {
     name: '아케인셰이드 아처햇',
@@ -385,17 +427,20 @@ const items: Item[] = [
   {
     name: '아케인셰이드 파이렛글러브',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBHI.png',
   },
   {
     name: '아케인셰이드 파이렛숄더',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJFOB.png',
   },
   {
     name: '아케인셰이드 파이렛슈즈',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIGID.png',
   },
   {
     name: '아케인셰이드 파이렛슈트',
@@ -405,7 +450,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 파이렛케이프',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJOKF.png',
   },
   {
     name: '아케인셰이드 파이렛햇',
@@ -415,7 +461,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 세이버',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMCJEKC.png',
   },
   {
     name: '아케인셰이드 엑스',
@@ -430,7 +477,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 투핸드소드',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELCJFLI.png',
   },
   {
     name: '아케인셰이드 투핸드엑스',
@@ -440,22 +488,26 @@ const items: Item[] = [
   {
     name: '아케인셰이드 투핸드해머',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELAJGGI.png',
   },
   {
     name: '아케인셰이드 스피어',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELBJFPJ.png',
   },
   {
     name: '아케인셰이드 폴암',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELGJFJF.png',
   },
   {
     name: '아케인셰이드 데스페라도',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENBJGPC.png',
   },
   {
     name: '아케인셰이드 엘라하',
@@ -465,17 +517,20 @@ const items: Item[] = [
   {
     name: '아케인셰이드 튜너',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENDIHPJ.png',
   },
   {
     name: '아케인셰이드 완드',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMFJFMJ.png',
   },
   {
     name: '아케인셰이드 스태프',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMKJFIE.png',
   },
   {
     name: '아케인셰이드 샤이닝로드',
@@ -485,7 +540,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 ESP리미터',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENEJHNI.png',
   },
   {
     name: '아케인셰이드 매직 건틀렛',
@@ -495,87 +551,104 @@ const items: Item[] = [
   {
     name: '아케인셰이드 보우',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELHJFLG.png',
   },
   {
     name: '아케인셰이드 크로스보우',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELEJFKC.png',
   },
   {
     name: '아케인셰이드 듀얼보우건',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEKAJGLF.png',
   },
   {
     name: '아케인셰이드 에인션트 보우',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEKLJHMB.png',
   },
   {
     name: '아케인셰이드 브레스 슈터',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENDPHPJ.png',
   },
   {
     name: '아케인셰이드 대거',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMBJFJI.png',
   },
   {
     name: '아케인셰이드 가즈',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELFJFIE.png',
   },
   {
     name: '아케인셰이드 케인',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMEJGKB.png',
   },
   {
     name: '아케인셰이드 에너지체인',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENGJGMD.png',
   },
   {
     name: '아케인셰이드 초선',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENLJHPJ.png',
   },
   {
     name: '아케인셰이드 블레이드',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMGJGOF.png',
   },
   {
     name: '아케인셰이드 피스톨',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELLJFNE.png',
   },
   {
     name: '아케인셰이드 클로',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELKJFMA.png',
   },
   {
     name: '아케인셰이드 시즈건',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEKBJGLB.png',
   },
   {
     name: '아케인셰이드 소울슈터',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENAJGMF.png',
   },
   {
     name: '앱솔랩스 나이트숄더',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGJF.png',
   },
   {
     name: '앱솔랩스 나이트헬름',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCPDMD.png',
   },
   {
     name: '앱솔랩스 나이트슈트',
@@ -585,17 +658,20 @@ const items: Item[] = [
   {
     name: '앱솔랩스 나이트슈즈',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIHNB.png',
   },
   {
     name: '앱솔랩스 나이트글러브',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBNH.png',
   },
   {
     name: '앱솔랩스 나이트케이프',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJAJE.png',
   },
   {
     name: '앱솔랩스 세이버',
@@ -675,7 +751,8 @@ const items: Item[] = [
   {
     name: '앱솔랩스 메이지크라운',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCPDMC.png',
   },
   {
     name: '앱솔랩스 메이지슈트',
@@ -685,27 +762,32 @@ const items: Item[] = [
   {
     name: '앱솔랩스 메이지슈즈',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIHND.png',
   },
   {
     name: '앱솔랩스 메이지글러브',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBNG.png',
   },
   {
     name: '앱솔랩스 메이지케이프',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJAHF.png',
   },
   {
     name: '앱솔랩스 메이지숄더',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGJH.png',
   },
   {
     name: '앱솔랩스 슈팅보우',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELHJFLD.png',
   },
   {
     name: '앱솔랩스 크로스보우',
@@ -715,7 +797,8 @@ const items: Item[] = [
   {
     name: '앱솔랩스 듀얼보우건',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEKAJGNJ.png',
   },
   {
     name: '앱솔랩스 에인션트 보우',
@@ -730,7 +813,8 @@ const items: Item[] = [
   {
     name: '앱솔랩스 아처후드',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCPDMF.png',
   },
   {
     name: '앱솔랩스 아처슈트',
@@ -740,32 +824,38 @@ const items: Item[] = [
   {
     name: '앱솔랩스 아처슈즈',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIHNC.png',
   },
   {
     name: '앱솔랩스 아처글러브',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBNJ.png',
   },
   {
     name: '앱솔랩스 아처케이프',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJAHE.png',
   },
   {
     name: '앱솔랩스 아처숄더',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGJG.png',
   },
   {
     name: '앱솔랩스 슬래셔',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMBJFJF.png',
   },
   {
     name: '앱솔랩스 리벤지가즈',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELFJFIA.png',
   },
   {
     name: '앱솔랩스 핀쳐케인',
@@ -795,12 +885,14 @@ const items: Item[] = [
   {
     name: '앱솔랩스 블레이드',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMGJGOA.png',
   },
   {
     name: '앱솔랩스 시프캡',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCPDME.png',
   },
   {
     name: '앱솔랩스 시프슈트',
@@ -810,22 +902,26 @@ const items: Item[] = [
   {
     name: '앱솔랩스 시프슈즈',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIHNF.png',
   },
   {
     name: '앱솔랩스 시프글러브',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBNI.png',
   },
   {
     name: '앱솔랩스 시프케이프',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJAHH.png',
   },
   {
     name: '앱솔랩스 시프숄더',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGJJ.png',
   },
   {
     name: '앱솔랩스 포인팅건',
@@ -835,7 +931,8 @@ const items: Item[] = [
   {
     name: '앱솔랩스 블로우너클',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELKJFPH.png',
   },
   {
     name: '앱솔랩스 블래스트캐논',
@@ -850,7 +947,8 @@ const items: Item[] = [
   {
     name: '앱솔랩스 파이렛페도라',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCPDMH.png',
   },
   {
     name: '앱솔랩스 파이렛슈트',
@@ -860,22 +958,26 @@ const items: Item[] = [
   {
     name: '앱솔랩스 파이렛슈즈',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIHNE.png',
   },
   {
     name: '앱솔랩스 파이렛글러브',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBKB.png',
   },
   {
     name: '앱솔랩스 파이렛케이프',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJAHG.png',
   },
   {
     name: '앱솔랩스 파이렛숄더',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGJI.png',
   },
   {
     name: '라이온하트 커틀러스',
@@ -1195,177 +1297,212 @@ const items: Item[] = [
   {
     name: '에테르넬 나이트헬름',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCOOGB.png',
   },
   {
     name: '에테르넬 나이트아머',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJDNC.png',
   },
   {
     name: '에테르넬 나이트팬츠',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJFGE.png',
   },
   {
     name: '에테르넬 나이트숄더',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJFPD.png',
   },
   {
     name: '에테르넬 메이지햇',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCOOGA.png',
   },
   {
     name: '에테르넬 메이지로브',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJDNF.png',
   },
   {
     name: '에테르넬 메이지팬츠',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJFGH.png',
   },
   {
     name: '에테르넬 메이지숄더',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJFPC.png',
   },
   {
     name: '에테르넬 아처햇',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCOOGD.png',
   },
   {
     name: '에테르넬 아처후드',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJDNE.png',
   },
   {
     name: '에테르넬 아처팬츠',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJFGG.png',
   },
   {
     name: '에테르넬 아처숄더',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJFPF.png',
   },
   {
     name: '에테르넬 시프반다나',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCOOGC.png',
   },
   {
     name: '에테르넬 시프셔츠',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJDNH.png',
   },
   {
     name: '에테르넬 시프팬츠',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJFGJ.png',
   },
   {
     name: '에테르넬 시프숄더',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJFPE.png',
   },
   {
     name: '에테르넬 파이렛햇',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCOOGF.png',
   },
   {
     name: '에테르넬 파이렛코트',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJDNG.png',
   },
   {
     name: '에테르넬 파이렛팬츠',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJFGI.png',
   },
   {
     name: '에테르넬 파이렛숄더',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJFPH.png',
   },
   {
     name: '몽환의 벨트',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOBJEOJ.png',
   },
   {
     name: '루즈 컨트롤 머신 마크',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJBND.png',
   },
   {
     name: '마력이 깃든 안대',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPAJFJJ.png',
   },
   {
     name: '커맨더 포스 이어링',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPBJEPH.png',
   },
   {
     name: '거대한 공포',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEODIEOH.png',
   },
   {
     name: '고통의 근원',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJDNB.png',
   },
   {
     name: '응축된 힘의 결정석',
     level: 110,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJDJJ.png',
   },
   {
     name: '아쿠아틱 레터 눈장식',
     level: 100,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPAJFNA.png',
   },
   {
     name: '블랙빈 마크',
     level: 135,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPAJFND.png',
   },
   {
     name: '파풀라투스 마크',
     level: 145,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPAJFJG.png',
   },
   {
     name: '지옥의 불꽃',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPBJGNH.png',
   },
   {
     name: '데아 시두스 이어링',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPBJFKA.png',
   },
   {
     name: '실버블라썸 링',
     level: 110,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEODIGKI.png',
   },
   {
     name: '고귀한 이피아의 반지',
     level: 120,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEODIFGD.png',
   },
   {
     name: '가디언 엔젤 링',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEODIEPC.png',
   },
   {
     name: '혼테일의 목걸이',
@@ -1375,32 +1512,38 @@ const items: Item[] = [
   {
     name: '카오스 혼테일의 목걸이',
     level: 120,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJHJH.png',
   },
   {
     name: '매커네이터 펜던트',
     level: 120,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJFLF.png',
   },
   {
     name: '도미네이터 펜던트',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJGLB.png',
   },
   {
     name: '골든 클로버 벨트',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOBJFJD.png',
   },
   {
     name: '분노한 자쿰의 벨트',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOBJFHH.png',
   },
   {
     name: '로얄 블랙메탈 숄더',
     level: 120,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGJB.png',
   },
   {
     name: '펜살리르 메이지로브',
@@ -2185,7 +2328,8 @@ const items: Item[] = [
   {
     name: '로얄 반 레온 센티널케이프',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJAPE.png',
   },
   {
     name: '로얄 반 레온 체이서헬름',
@@ -2240,17 +2384,20 @@ const items: Item[] = [
   {
     name: '마이스터링',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEODIHLE.png',
   },
   {
     name: '마이스터 이어링',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPBJFOB.png',
   },
   {
     name: '마이스터 숄더',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGLF.png',
   },
   {
     name: '라이징 썬 펜던트',
@@ -2260,27 +2407,32 @@ const items: Item[] = [
   {
     name: '샤이니 레드 아처 마이스터 심볼',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJDOJ.png',
   },
   {
     name: '샤이니 레드 파이렛 마이스터 심볼',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJDPB.png',
   },
   {
     name: '샤이니 레드 매지션 마이스터 심볼',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJDOG.png',
   },
   {
     name: '샤이니 레드 시프 마이스터 심볼',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJDOI.png',
   },
   {
     name: '샤이니 레드 워리어 마이스터 심볼',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJDOH.png',
   },
   {
     name: '샤이니 레드 스페셜 심볼',
@@ -2290,22 +2442,26 @@ const items: Item[] = [
   {
     name: '베어스 퍼플 펜던트',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJHHA.png',
   },
   {
     name: '아울스 퍼플 펜던트',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJHHE.png',
   },
   {
     name: '울프스 퍼플 펜던트',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJHHI.png',
   },
   {
     name: '피콕스 퍼플 펜던트',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJGOC.png',
   },
   {
     name: '피어리스 펜던트',
@@ -2375,97 +2531,116 @@ const items: Item[] = [
   {
     name: '에스텔라 이어링',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPBJENB.png',
   },
   {
     name: '트와일라이트 마크',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJALG.png',
   },
   {
     name: '데이브레이크 펜던트',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJDKC.png',
   },
   {
     name: '여명의 가디언 엔젤 링',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEODIEPH.png',
   },
   {
     name: '이글아이 던위치로브',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJFLE.png',
   },
   {
     name: '트릭스터 던위치팬츠',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJGIH.png',
   },
   {
     name: '하이네스 던위치햇',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCIAHJ.png',
   },
   {
     name: '이글아이 어새신셔츠',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJFLG.png',
   },
   {
     name: '트릭스터 어새신팬츠',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJGIJ.png',
   },
   {
     name: '하이네스 어새신보닛',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCIPOB.png',
   },
   {
     name: '이글아이 레인져후드',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJFLH.png',
   },
   {
     name: '트릭스터 레인져팬츠',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJGIG.png',
   },
   {
     name: '하이네스 레인져베레',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCIAHI.png',
   },
   {
     name: '이글아이 원더러코트',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJFLJ.png',
   },
   {
     name: '트릭스터 원더러팬츠',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJGII.png',
   },
   {
     name: '하이네스 원더러햇',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCIPOA.png',
   },
   {
     name: '이글아이 워리어아머',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJFLF.png',
   },
   {
     name: '트릭스터 워리어팬츠',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJGIE.png',
   },
   {
     name: '하이네스 워리어헬름',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCIAHG.png',
   },
   {
     name: '파프니르 미스틸테인',
@@ -2630,17 +2805,20 @@ const items: Item[] = [
   {
     name: '아케인셰이드 메이지글러브',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBHH.png',
   },
   {
     name: '아케인셰이드 메이지숄더',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGHG.png',
   },
   {
     name: '아케인셰이드 메이지슈즈',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIGLI.png',
   },
   {
     name: '아케인셰이드 메이지슈트',
@@ -2650,7 +2828,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 메이지케이프',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJOKA.png',
   },
   {
     name: '아케인셰이드 메이지햇',
@@ -2660,17 +2839,20 @@ const items: Item[] = [
   {
     name: '아케인셰이드 나이트글러브',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBHE.png',
   },
   {
     name: '아케인셰이드 나이트숄더',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGHH.png',
   },
   {
     name: '아케인셰이드 나이트슈즈',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIGLJ.png',
   },
   {
     name: '아케인셰이드 나이트슈트',
@@ -2680,7 +2862,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 나이트케이프',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJOKB.png',
   },
   {
     name: '아케인셰이드 나이트햇',
@@ -2690,17 +2873,20 @@ const items: Item[] = [
   {
     name: '아케인셰이드 시프글러브',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBHJ.png',
   },
   {
     name: '아케인셰이드 시프숄더',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGHI.png',
   },
   {
     name: '아케인셰이드 시프슈즈',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIGIA.png',
   },
   {
     name: '아케인셰이드 시프슈트',
@@ -2710,27 +2896,32 @@ const items: Item[] = [
   {
     name: '아케인셰이드 시프케이프',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJOKC.png',
   },
   {
     name: '아케인셰이드 시프햇',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCPPPA.png',
   },
   {
     name: '아케인셰이드 아처글러브',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBHG.png',
   },
   {
     name: '아케인셰이드 아처숄더',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGHJ.png',
   },
   {
     name: '아케인셰이드 아처슈즈',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIGIB.png',
   },
   {
     name: '아케인셰이드 아처슈트',
@@ -2740,7 +2931,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 아처케이프',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJOKD.png',
   },
   {
     name: '아케인셰이드 아처햇',
@@ -2750,17 +2942,20 @@ const items: Item[] = [
   {
     name: '아케인셰이드 파이렛글러브',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBHI.png',
   },
   {
     name: '아케인셰이드 파이렛숄더',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJFOB.png',
   },
   {
     name: '아케인셰이드 파이렛슈즈',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIGID.png',
   },
   {
     name: '아케인셰이드 파이렛슈트',
@@ -2770,7 +2965,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 파이렛케이프',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJOKF.png',
   },
   {
     name: '아케인셰이드 파이렛햇',
@@ -2780,7 +2976,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 세이버',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMCJEKC.png',
   },
   {
     name: '아케인셰이드 엑스',
@@ -2795,7 +2992,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 투핸드소드',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELCJFLI.png',
   },
   {
     name: '아케인셰이드 투핸드엑스',
@@ -2805,22 +3003,26 @@ const items: Item[] = [
   {
     name: '아케인셰이드 투핸드해머',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELAJGGI.png',
   },
   {
     name: '아케인셰이드 스피어',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELBJFPJ.png',
   },
   {
     name: '아케인셰이드 폴암',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELGJFJF.png',
   },
   {
     name: '아케인셰이드 데스페라도',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENBJGPC.png',
   },
   {
     name: '아케인셰이드 엘라하',
@@ -2830,17 +3032,20 @@ const items: Item[] = [
   {
     name: '아케인셰이드 튜너',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENDIHPJ.png',
   },
   {
     name: '아케인셰이드 완드',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMFJFMJ.png',
   },
   {
     name: '아케인셰이드 스태프',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMKJFIE.png',
   },
   {
     name: '아케인셰이드 샤이닝로드',
@@ -2850,7 +3055,8 @@ const items: Item[] = [
   {
     name: '아케인셰이드 ESP리미터',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENEJHNI.png',
   },
   {
     name: '아케인셰이드 매직 건틀렛',
@@ -2860,87 +3066,104 @@ const items: Item[] = [
   {
     name: '아케인셰이드 보우',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELHJFLG.png',
   },
   {
     name: '아케인셰이드 크로스보우',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELEJFKC.png',
   },
   {
     name: '아케인셰이드 듀얼보우건',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEKAJGLF.png',
   },
   {
     name: '아케인셰이드 에인션트 보우',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEKLJHMB.png',
   },
   {
     name: '아케인셰이드 브레스 슈터',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENDPHPJ.png',
   },
   {
     name: '아케인셰이드 대거',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMBJFJI.png',
   },
   {
     name: '아케인셰이드 가즈',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELFJFIE.png',
   },
   {
     name: '아케인셰이드 케인',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMEJGKB.png',
   },
   {
     name: '아케인셰이드 에너지체인',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENGJGMD.png',
   },
   {
     name: '아케인셰이드 초선',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENLJHPJ.png',
   },
   {
     name: '아케인셰이드 블레이드',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMGJGOF.png',
   },
   {
     name: '아케인셰이드 피스톨',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELLJFNE.png',
   },
   {
     name: '아케인셰이드 클로',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELKJFMA.png',
   },
   {
     name: '아케인셰이드 시즈건',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEKBJGLB.png',
   },
   {
     name: '아케인셰이드 소울슈터',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KENAJGMF.png',
   },
   {
     name: '앱솔랩스 나이트숄더',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGJF.png',
   },
   {
     name: '앱솔랩스 나이트헬름',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCPDMD.png',
   },
   {
     name: '앱솔랩스 나이트슈트',
@@ -2950,17 +3173,20 @@ const items: Item[] = [
   {
     name: '앱솔랩스 나이트슈즈',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIHNB.png',
   },
   {
     name: '앱솔랩스 나이트글러브',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBNH.png',
   },
   {
     name: '앱솔랩스 나이트케이프',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJAJE.png',
   },
   {
     name: '앱솔랩스 세이버',
@@ -3040,7 +3266,8 @@ const items: Item[] = [
   {
     name: '앱솔랩스 메이지크라운',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCPDMC.png',
   },
   {
     name: '앱솔랩스 메이지슈트',
@@ -3050,27 +3277,32 @@ const items: Item[] = [
   {
     name: '앱솔랩스 메이지슈즈',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIHND.png',
   },
   {
     name: '앱솔랩스 메이지글러브',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBNG.png',
   },
   {
     name: '앱솔랩스 메이지케이프',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJAHF.png',
   },
   {
     name: '앱솔랩스 메이지숄더',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGJH.png',
   },
   {
     name: '앱솔랩스 슈팅보우',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELHJFLD.png',
   },
   {
     name: '앱솔랩스 크로스보우',
@@ -3080,7 +3312,8 @@ const items: Item[] = [
   {
     name: '앱솔랩스 듀얼보우건',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEKAJGNJ.png',
   },
   {
     name: '앱솔랩스 에인션트 보우',
@@ -3095,7 +3328,8 @@ const items: Item[] = [
   {
     name: '앱솔랩스 아처후드',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCPDMF.png',
   },
   {
     name: '앱솔랩스 아처슈트',
@@ -3105,32 +3339,38 @@ const items: Item[] = [
   {
     name: '앱솔랩스 아처슈즈',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIHNC.png',
   },
   {
     name: '앱솔랩스 아처글러브',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBNJ.png',
   },
   {
     name: '앱솔랩스 아처케이프',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJAHE.png',
   },
   {
     name: '앱솔랩스 아처숄더',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGJG.png',
   },
   {
     name: '앱솔랩스 슬래셔',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMBJFJF.png',
   },
   {
     name: '앱솔랩스 리벤지가즈',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELFJFIA.png',
   },
   {
     name: '앱솔랩스 핀쳐케인',
@@ -3160,12 +3400,14 @@ const items: Item[] = [
   {
     name: '앱솔랩스 블레이드',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEMGJGOA.png',
   },
   {
     name: '앱솔랩스 시프캡',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCPDME.png',
   },
   {
     name: '앱솔랩스 시프슈트',
@@ -3175,22 +3417,26 @@ const items: Item[] = [
   {
     name: '앱솔랩스 시프슈즈',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIHNF.png',
   },
   {
     name: '앱솔랩스 시프글러브',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBNI.png',
   },
   {
     name: '앱솔랩스 시프케이프',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJAHH.png',
   },
   {
     name: '앱솔랩스 시프숄더',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGJJ.png',
   },
   {
     name: '앱솔랩스 포인팅건',
@@ -3200,7 +3446,8 @@ const items: Item[] = [
   {
     name: '앱솔랩스 블로우너클',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KELKJFPH.png',
   },
   {
     name: '앱솔랩스 블래스트캐논',
@@ -3215,7 +3462,8 @@ const items: Item[] = [
   {
     name: '앱솔랩스 파이렛페도라',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCPDMH.png',
   },
   {
     name: '앱솔랩스 파이렛슈트',
@@ -3225,22 +3473,26 @@ const items: Item[] = [
   {
     name: '앱솔랩스 파이렛슈즈',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPFIHNE.png',
   },
   {
     name: '앱솔랩스 파이렛글러브',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPKJBKB.png',
   },
   {
     name: '앱솔랩스 파이렛케이프',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJAHG.png',
   },
   {
     name: '앱솔랩스 파이렛숄더',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGJI.png',
   },
   {
     name: '라이온하트 커틀러스',
@@ -3560,177 +3812,212 @@ const items: Item[] = [
   {
     name: '에테르넬 나이트헬름',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCOOGB.png',
   },
   {
     name: '에테르넬 나이트아머',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJDNC.png',
   },
   {
     name: '에테르넬 나이트팬츠',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJFGE.png',
   },
   {
     name: '에테르넬 나이트숄더',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJFPD.png',
   },
   {
     name: '에테르넬 메이지햇',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCOOGA.png',
   },
   {
     name: '에테르넬 메이지로브',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJDNF.png',
   },
   {
     name: '에테르넬 메이지팬츠',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJFGH.png',
   },
   {
     name: '에테르넬 메이지숄더',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJFPC.png',
   },
   {
     name: '에테르넬 아처햇',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCOOGD.png',
   },
   {
     name: '에테르넬 아처후드',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJDNE.png',
   },
   {
     name: '에테르넬 아처팬츠',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJFGG.png',
   },
   {
     name: '에테르넬 아처숄더',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJFPF.png',
   },
   {
     name: '에테르넬 시프반다나',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCOOGC.png',
   },
   {
     name: '에테르넬 시프셔츠',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJDNH.png',
   },
   {
     name: '에테르넬 시프팬츠',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJFGJ.png',
   },
   {
     name: '에테르넬 시프숄더',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJFPE.png',
   },
   {
     name: '에테르넬 파이렛햇',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPCOOGF.png',
   },
   {
     name: '에테르넬 파이렛코트',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPGJDNG.png',
   },
   {
     name: '에테르넬 파이렛팬츠',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPEJFGI.png',
   },
   {
     name: '에테르넬 파이렛숄더',
     level: 250,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJFPH.png',
   },
   {
     name: '몽환의 벨트',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOBJEOJ.png',
   },
   {
     name: '루즈 컨트롤 머신 마크',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJBND.png',
   },
   {
     name: '마력이 깃든 안대',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPAJFJJ.png',
   },
   {
     name: '커맨더 포스 이어링',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPBJEPH.png',
   },
   {
     name: '거대한 공포',
     level: 200,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEODIEOH.png',
   },
   {
     name: '고통의 근원',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJDNB.png',
   },
   {
     name: '응축된 힘의 결정석',
     level: 110,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJDJJ.png',
   },
   {
     name: '아쿠아틱 레터 눈장식',
     level: 100,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPAJFNA.png',
   },
   {
     name: '블랙빈 마크',
     level: 135,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPAJFND.png',
   },
   {
     name: '파풀라투스 마크',
     level: 145,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPAJFJG.png',
   },
   {
     name: '지옥의 불꽃',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPBJGNH.png',
   },
   {
     name: '데아 시두스 이어링',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPBJFKA.png',
   },
   {
     name: '실버블라썸 링',
     level: 110,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEODIGKI.png',
   },
   {
     name: '고귀한 이피아의 반지',
     level: 120,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEODIFGD.png',
   },
   {
     name: '가디언 엔젤 링',
     level: 160,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEODIEPC.png',
   },
   {
     name: '혼테일의 목걸이',
@@ -3740,32 +4027,38 @@ const items: Item[] = [
   {
     name: '카오스 혼테일의 목걸이',
     level: 120,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJHJH.png',
   },
   {
     name: '매커네이터 펜던트',
     level: 120,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJFLF.png',
   },
   {
     name: '도미네이터 펜던트',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJGLB.png',
   },
   {
     name: '골든 클로버 벨트',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOBJFJD.png',
   },
   {
     name: '분노한 자쿰의 벨트',
     level: 150,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOBJFHH.png',
   },
   {
     name: '로얄 블랙메탈 숄더',
     level: 120,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGJB.png',
   },
   {
     name: '펜살리르 메이지로브',
@@ -4550,7 +4843,8 @@ const items: Item[] = [
   {
     name: '로얄 반 레온 센티널케이프',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOCJAPE.png',
   },
   {
     name: '로얄 반 레온 체이서헬름',
@@ -4605,17 +4899,20 @@ const items: Item[] = [
   {
     name: '마이스터링',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEODIHLE.png',
   },
   {
     name: '마이스터 이어링',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPBJFOB.png',
   },
   {
     name: '마이스터 숄더',
     level: 140,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOHJGLF.png',
   },
   {
     name: '라이징 썬 펜던트',
@@ -4625,27 +4922,32 @@ const items: Item[] = [
   {
     name: '샤이니 레드 아처 마이스터 심볼',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJDOJ.png',
   },
   {
     name: '샤이니 레드 파이렛 마이스터 심볼',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJDPB.png',
   },
   {
     name: '샤이니 레드 매지션 마이스터 심볼',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJDOG.png',
   },
   {
     name: '샤이니 레드 시프 마이스터 심볼',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJDOI.png',
   },
   {
     name: '샤이니 레드 워리어 마이스터 심볼',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEPDJDOH.png',
   },
   {
     name: '샤이니 레드 스페셜 심볼',
@@ -4655,22 +4957,26 @@ const items: Item[] = [
   {
     name: '베어스 퍼플 펜던트',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJHHA.png',
   },
   {
     name: '아울스 퍼플 펜던트',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJHHE.png',
   },
   {
     name: '울프스 퍼플 펜던트',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJHHI.png',
   },
   {
     name: '피콕스 퍼플 펜던트',
     level: 130,
-    imageUrl: '',
+    imageUrl:
+      'https://open.api.nexon.com/static/maplestory/ItemIcon/KEOAJGOC.png',
   },
   {
     name: '피어리스 펜던트',

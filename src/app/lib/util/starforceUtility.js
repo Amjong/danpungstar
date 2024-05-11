@@ -82,7 +82,6 @@ const getItemEquipmentInfo = async (nickname) => {
   const items = getItemTable();
 
   const finalResponse = await response.json();
-  console.log(finalResponse);
   finalResponse.item_equipment.forEach((element) => {
     const name = element.item_name;
     items.forEach((item) => {
