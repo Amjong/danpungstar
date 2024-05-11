@@ -34,7 +34,7 @@ const getCharacterBasicInfo = async (ocid, date) => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'x-nxopen-api-key': process.env.REACT_APP_MAPLE_API_KEY,
+      'x-nxopen-api-key': process.env.NEXT_PUBLIC_MAPLE_API_KEY,
     },
   });
 
@@ -73,7 +73,7 @@ const getOcidFromNickname = async (nickname) => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'x-nxopen-api-key': process.env.REACT_APP_MAPLE_API_KEY,
+      'x-nxopen-api-key': process.env.NEXT_PUBLIC_MAPLE_API_KEY,
     },
   });
 
