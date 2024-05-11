@@ -6,7 +6,7 @@ const {
   getCharacterItemEquipmentUrl,
 } = require('./openApiManager');
 
-const { items } = require('../../data/itemInfo');
+const getItemTable = require('../../data/ItemInfo');
 
 /* TODO : Save static table for each level&starforceCount to optimizing */
 const calculateCost = (Itemlevel, starforceCount, date) => {
@@ -61,7 +61,7 @@ const getItemEquipmentInfo = async (nickname) => {
   console.log(`${nickname} 조회 시작`);
   const ocidResponse = await getOcidFromNickname(nickname);
   const ocid = ocidResponse.ocid;
-  console.log(ocid);
+  console.log('ocid 받아옴 : ' + ocid);
   const response = await fetch(
     getCharacterItemEquipmentUrl(ocid, '2024-05-05'),
     {
@@ -79,13 +79,17 @@ const getItemEquipmentInfo = async (nickname) => {
     throw new Error(response.status);
   }
 
+  const items = getItemTable();
+
   const finalResponse = await response.json();
+  console.log(finalResponse);
   finalResponse.item_equipment.forEach((element) => {
     const name = element.item_name;
     items.forEach((item) => {
-      if (item.name === name) {
+      if (item.name === name && item.imageUrl === '') {
         item.imageUrl = element.item_icon;
         console.log(`${item.name} -> ${item.imageUrl}`);
+        console.log(item.imageUrl);
       }
     });
   });
@@ -94,6 +98,7 @@ const getItemEquipmentInfo = async (nickname) => {
 };
 
 const printItems = () => {
+  const items = getItemTable();
   items.forEach((element) => {
     console.log(`{
       name: '${element.name}',

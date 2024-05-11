@@ -1,7 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { getItemEquipmentInfo, printItems } from '../lib/util/starforceUtility';
 
 export default function Page() {

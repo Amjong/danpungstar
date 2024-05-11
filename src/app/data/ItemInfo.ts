@@ -4739,4 +4739,8 @@ const items: Item[] = [
   },
 ];
 
-module.exports = items;
+const getItemTable = () => {
+  return items;
+};
+
+module.exports = getItemTable;
