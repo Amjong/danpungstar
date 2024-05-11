@@ -8,6 +8,12 @@ const nextConfig = {
         port: '',
         pathname: '/dazzvmx3y/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'open.api.nexon.com',
+        port: '',
+        pathname: '/static/maplestory/ItemIcon/**',
+      },
     ],
   },
 };
