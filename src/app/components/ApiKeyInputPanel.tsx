@@ -10,7 +10,6 @@ import ApiKeyDialog from './ApiKeyDialog';
 import ApiKeyForm from './ApiKeyForm';
 import StarTextArea from '../ui/StarTextArea';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export default function ApiKeyInputPanel() {
@@ -36,25 +35,15 @@ export default function ApiKeyInputPanel() {
       (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24) + 1;
     let doneCount = 0;
 
-    let dateArray: Promise<any[]>[] = [];
-
     setProgress((prev) => ({ ...prev, total: totalCount }));
-    const starforceHistoryArray: any[] = [];
-
-    console.log(totalCount, apiKey);
+    const starforceHistoryArray: starforceHistory[] = [];
 
     while (startDate <= endDate) {
-      dateArray.push(
-        getStarForceInfo(apiKey, startDate.toISOString().slice(0, 10))
+      const currentDateStarforceHistory = await getStarForceInfo(
+        apiKey,
+        startDate.toISOString().slice(0, 10)
       );
-      startDate.setDate(startDate.getDate() + 1);
-    }
-
-    console.log(dateArray);
-
-    for (const promise of dateArray) {
-      const currentDateArray = await promise;
-      starforceHistoryArray.push(...currentDateArray);
+      starforceHistoryArray.push(currentDateStarforceHistory);
       doneCount++;
       setProgress((prev) => ({ ...prev, current: doneCount }));
       if (!isLoading || errorText !== '') {
@@ -62,6 +51,7 @@ export default function ApiKeyInputPanel() {
         console.log(isLoading, errorText);
         return undefined;
       }
+      startDate.setDate(startDate.getDate() + 1);
     }
 
     return starforceHistoryArray;
@@ -90,11 +80,7 @@ export default function ApiKeyInputPanel() {
   useEffect(() => {
     if (!isLoading) return;
 
-    getStarForceInfoByDate(
-      userInfo.apiKey,
-      userInfo.startDate,
-      userInfo.endDate
-    )
+    getStarForceInfoByDate(userInfo.apiKey, new Date('2023-12-27'), new Date())
       .then((result) => {
         if (!result) return;
         if (result.length === 0) {

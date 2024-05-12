@@ -1,6 +1,6 @@
 import { useMemo, useState, useRef } from 'react';
 import { useStarforceInfoArray } from '../context/starforceInfoContext';
-import { calculateCostForEachItemsFromArray } from '../lib/util/starforceUtility';
+import { getCostFromStarforceHistory } from '../lib/util/starforceUtility';
 import { useTable, useFilters, useSortBy } from 'react-table';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { useLoading } from '../context/loadingContext';
@@ -233,7 +233,7 @@ export default function UsedMesoPanel() {
 
   let itemsAndCost = useMemo(() => {
     if (starforceInfoArray.length === 0) return;
-    return Array.from(calculateCostForEachItemsFromArray(starforceInfoArray));
+    return Array.from(getCostFromStarforceHistory(starforceInfoArray));
   }, [starforceInfoArray]);
 
   return (

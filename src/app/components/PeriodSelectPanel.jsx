@@ -1,11 +1,11 @@
 'use client';
 import { useCallback, useEffect, useState } from 'react';
-import StarTextArea from '../ui/StarTextArea';
 import RadioBtns from '../ui/RadioBtns';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useUserInfo } from '../context/userInfoContext';
 import MyCalendar from './MyCalendar';
 import MasterToolTip from '../ui/MasterToolTip';
+import { MasterPrimaryButton } from '../ui/MasterPrimaryButton';
 
 export default function PeriodSelectPanel() {
   const [isPeriod, setIsPeriod] = useState(false);
@@ -63,15 +63,6 @@ export default function PeriodSelectPanel() {
 
   return (
     <div>
-      <div className='flex gap-1'>
-        <StarTextArea text='조회기간' />
-        <div className='mt-1'>
-          <MasterToolTip
-            text='2023-12-27 이후의 데이터만 조회 가능합니다'
-            placement='right-end'
-          />
-        </div>
-      </div>
       <div className='flex flex-row translate-x-[11px] mt-5 flex-wrap'>
         <div className='min-x-[182px]'>
           <RadioBtns onSelect={onSelect} />
@@ -99,9 +90,19 @@ export default function PeriodSelectPanel() {
               )}
               placeholderText='종료일'
             />
+            <MasterPrimaryButton
+              text='조회'
+              onClick={undefined}
+              color='r2'
+              type='submit'
+            />
           </div>
         )}
       </div>
+      <MasterToolTip
+        text='2023-12-27 이후의 데이터만 조회 가능합니다'
+        placement='right-end'
+      />
     </div>
   );
 }
