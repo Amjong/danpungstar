@@ -1,7 +1,7 @@
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import ApiKeyGuidePanel from './ApiKeyGuidePanel';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 export default function ApiKeyDialog({
   errorText,
@@ -24,10 +24,14 @@ export default function ApiKeyDialog({
   };
   return (
     <>
-      <span className='text-white font-bold text-xl'>API Key 입력 가이드 </span>
+      <span className='text-white font-bold text-sm'>API Key 입력 가이드 </span>
       <Dialog>
         <DialogTrigger asChild>
-          <OpenInNewIcon className='cursor-pointer' color='primary' />
+          <InfoOutlinedIcon
+            fontSize='small'
+            sx={{ color: '#FFFFFF' }}
+            className='cursor-pointer'
+          />
         </DialogTrigger>
         <DialogContent className='flex w-full overflow-y-auto h-screen bg-n1'>
           <ApiKeyGuidePanel />
