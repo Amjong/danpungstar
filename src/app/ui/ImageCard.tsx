@@ -11,14 +11,22 @@ export default function ImageCard({
 }) {
   return (
     <div
-      className={`flex items-center justify-center border-2 rounded-sm bg-black border-red-600 w-[${
-        width + 10
-      }px] h-[${height + 10}px]`}
+      className={`flex items-center justify-center border-2 rounded-sm bg-black border-red-600 w-[70px] h-[80px]`}
     >
       {imageUrl === '' ? (
-        <div className='text-white'>이미지 준비중입니다.</div>
+        <div className='text-white break-words'>
+          이미지
+          <br />
+          준비 중
+        </div>
       ) : (
-        <Image alt='cardImage' src={imageUrl} width={width} height={height} />
+        <Image
+          alt='cardImage'
+          src={imageUrl}
+          width={width}
+          height={height}
+          objectFit='cover'
+        />
       )}
     </div>
   );

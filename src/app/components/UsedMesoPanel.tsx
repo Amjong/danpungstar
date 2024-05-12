@@ -285,7 +285,7 @@ export default function UsedMesoPanel() {
                 return {
                   item: (
                     <div className='flex flex-col justify-center items-center'>
-                      {convertedKey[0]}
+                      <div className='mb-3 font-regular'>{convertedKey[0]}</div>
                       <ImageCard
                         imageUrl={convertedKey[2]}
                         width={50}
