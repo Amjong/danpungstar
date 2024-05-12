@@ -5,13 +5,13 @@ const StarforceContext = createContext();
 
 // 2. Context Provider 생성
 export function StarforceProvider({ children }) {
-  const [starforceInfoArray, setStarforceInfoArray] = useState([]);
+  const [starforceHistoryArray, setStarforceHistoryArray] = useState([]);
 
   return (
     <StarforceContext.Provider
       value={{
-        starforceInfoArray,
-        setStarforceInfoArray,
+        starforceHistoryArray,
+        setStarforceHistoryArray,
       }}
     >
       {children}
@@ -19,8 +19,8 @@ export function StarforceProvider({ children }) {
   );
 }
 
-export function useStarforceInfoArray() {
-  const { starforceInfoArray, setStarforceInfoArray } =
+export function useStarforceHistoryArray() {
+  const { starforceHistoryArray, setStarforceHistoryArray } =
     useContext(StarforceContext);
-  return [starforceInfoArray, setStarforceInfoArray];
+  return [starforceHistoryArray, setStarforceHistoryArray];
 }

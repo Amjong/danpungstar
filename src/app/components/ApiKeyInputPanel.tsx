@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
-import { useStarforceInfoArray } from '../context/starforceInfoContext';
+import { useStarforceHistoryArray } from '../context/starforceContext';
 import { useUserInfo } from '../context/userInfoContext';
 import { useLoading } from '../context/loadingContext';
 import { useContentError } from '../context/contentErrorContext';
@@ -11,10 +11,12 @@ import ApiKeyForm from './ApiKeyForm';
 import StarTextArea from '../ui/StarTextArea';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Link from 'next/link';
+import { starforceHistory } from '../types/starforce';
 
 export default function ApiKeyInputPanel() {
   const [userInfo, setUserInfo] = useUserInfo();
-  const [starforceInfoArray, setStarforceInfoArray] = useStarforceInfoArray();
+  const [starforceHistoryArray, setStarforceHistoryArray] =
+    useStarforceHistoryArray();
   const [isLoading, setIsLoading] = useLoading();
   const [errorText, setErrorText] = useContentError();
   const router = useRouter();
@@ -90,15 +92,10 @@ export default function ApiKeyInputPanel() {
           setIsLoading(false);
           return;
         }
-        setStarforceInfoArray(() => {
+        setStarforceHistoryArray(() => {
           return Array.from(result as any[]);
         });
         setIsLoading(false);
-        setUserInfo((prev) => ({
-          ...prev,
-          finalStartDate: userInfo.startDate,
-          finalEndDate: userInfo.endDate,
-        }));
         router.push('/result');
       })
       .catch((error) => {

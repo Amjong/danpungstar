@@ -1,5 +1,5 @@
 import { useMemo, useState, useRef } from 'react';
-import { useStarforceInfoArray } from '../context/starforceInfoContext';
+import { useStarforceHistoryArray } from '../context/starforceContext';
 import { getCostFromStarforceHistory } from '../lib/util/starforceUtility';
 import { useTable, useFilters, useSortBy } from 'react-table';
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -205,7 +205,7 @@ const TableSkeleton = () => {
 };
 
 export default function UsedMesoPanel() {
-  const [starforceInfoArray] = useStarforceInfoArray();
+  const [starforceHistoryArray] = useStarforceHistoryArray();
   const [userInfo] = useUserInfo();
   const [isLoading] = useLoading();
   const [errorText] = useContentError();
@@ -232,9 +232,9 @@ export default function UsedMesoPanel() {
   );
 
   let itemsAndCost = useMemo(() => {
-    if (starforceInfoArray.length === 0) return;
-    return Array.from(getCostFromStarforceHistory(starforceInfoArray));
-  }, [starforceInfoArray]);
+    if (starforceHistoryArray.length === 0) return;
+    return Array.from(getCostFromStarforceHistory(starforceHistoryArray));
+  }, [starforceHistoryArray]);
 
   return (
     <div>

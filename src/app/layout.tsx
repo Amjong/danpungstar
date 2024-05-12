@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import Footer from './components/Footer';
-import { StarforceProvider } from './context/starforceInfoContext';
+import { StarforceProvider } from './context/starforceContext';
 import { UserInfoProvider } from './context/userInfoContext';
 import { LoadingProvider } from './context/loadingContext';
 import { ContentErrorProvider } from './context/contentErrorContext';

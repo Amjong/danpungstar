@@ -1,7 +1,7 @@
 import { Skeleton } from '@mui/material';
 import { useMemo, useRef, useState } from 'react';
 import { useFilters, useTable } from 'react-table';
-import { useStarforceInfoArray } from '../context/starforceInfoContext';
+import { useStarforceHistoryArray } from '../context/starforceContext';
 import { useLoading } from '../context/loadingContext';
 import StarIcon from '@mui/icons-material/Star';
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -204,7 +204,7 @@ const TableSkeleton = () => {
 };
 
 export default function SuccessRatePanel() {
-  const [starforceInfoArray] = useStarforceInfoArray();
+  const [starforceHistoryArray] = useStarforceHistoryArray();
   const [isLoading] = useLoading();
   const [errorText] = useContentError();
   const tableRef = useRef(null);
@@ -249,7 +249,7 @@ export default function SuccessRatePanel() {
   return (
     <div>
       {errorText === '' && isLoading && <TableSkeleton />}
-      {errorText === '' && !isLoading && starforceInfoArray.length !== 0 && (
+      {errorText === '' && !isLoading && starforceHistoryArray.length !== 0 && (
         <div>
           <div className='mb-5 mt-20 flex justify-between'>
             <span className='mr-2 flex gap-2 items-center'>
@@ -273,7 +273,7 @@ export default function SuccessRatePanel() {
           <div ref={tableRef} className='overflow-auto'>
             <Table
               columns={columns}
-              data={getStarforceResultInfo(starforceInfoArray).map(
+              data={getStarforceResultInfo(starforceHistoryArray).map(
                 (element, index) => {
                   return {
                     step: (

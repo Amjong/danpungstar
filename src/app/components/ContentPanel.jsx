@@ -4,7 +4,7 @@ import UsedMesoPanel from './UsedMesoPanel';
 import SuccessRatePanel from './SuccessRatePanel';
 import HistoryPanel from './HistoryPanel';
 import TapBtns from '../ui/TapBtns';
-import { useStarforceInfoArray } from '../context/starforceInfoContext';
+import { useStarforceHistoryArray } from '../context/starforceContext';
 import Link from 'next/link';
 import { useLoading } from '../context/loadingContext';
 import { useContentError } from '../context/contentErrorContext';
@@ -26,7 +26,7 @@ const contentArray = [
 
 export default function ContentPanel() {
   const [menu, setMenu] = useState(0);
-  const [starforceInfoArray] = useStarforceInfoArray();
+  const [starforceHistoryArray] = useStarforceHistoryArray();
   const [isLoading] = useLoading();
   const [errorText] = useContentError();
   const handleChange = (value) => {
@@ -45,7 +45,7 @@ export default function ContentPanel() {
         {errorText === '' &&
           menu !== 2 &&
           !isLoading &&
-          starforceInfoArray.length === 0 && (
+          starforceHistoryArray.length === 0 && (
             <div className='text-xl font-bold text-center text-white mt-20'>
               API KEY 값을 입력 해주세요.
               <Link
@@ -58,7 +58,7 @@ export default function ContentPanel() {
               <div className='font-regular'>(약 1 ~ 2분 소요)</div>
             </div>
           )}
-        {menu !== 2 && starforceInfoArray.length !== 0 && (
+        {menu !== 2 && starforceHistoryArray.length !== 0 && (
           <div className='overflow-auto'>{contentArray[menu].component}</div>
         )}
       </div>
