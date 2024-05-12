@@ -5,12 +5,13 @@ import { useUserInfo } from '../context/userInfoContext';
 import { useLoading } from '../context/loadingContext';
 import { useContentError } from '../context/contentErrorContext';
 import { useRouter } from 'next/navigation';
-import {
-  getRepresentativeCharacter,
-  getStarForceInfo,
-} from '../lib/util/starforceUtility';
+import { getStarForceInfo } from '../lib/util/starforceUtility';
 import ApiKeyDialog from './ApiKeyDialog';
 import ApiKeyForm from './ApiKeyForm';
+import StarTextArea from '../ui/StarTextArea';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function ApiKeyInputPanel() {
   const [userInfo, setUserInfo] = useUserInfo();
@@ -47,21 +48,6 @@ export default function ApiKeyInputPanel() {
         getStarForceInfo(apiKey, startDate.toISOString().slice(0, 10))
       );
       startDate.setDate(startDate.getDate() + 1);
-      // if (!isLoading || errorText !== '') {
-      //   setProgress(() => ({ current: 0, total: 0 }));
-      //   console.log(isLoading, errorText);
-      //   return undefined;
-      // }
-      // const currentDateArray = await getStarForceInfo(
-      //   apiKey,
-      //   startDate.toISOString().slice(0, 10)
-      // );
-      // starforceHistoryArray = starforceHistoryArray.concat(currentDateArray);
-      // // TODO : exception handling
-      // startDate.setDate(startDate.getDate() + 1);
-      // doneCount++;
-      // console.log(doneCount);
-      // setProgress((prev) => ({ ...prev, current: doneCount }));
     }
 
     console.log(dateArray);
@@ -148,18 +134,6 @@ export default function ApiKeyInputPanel() {
           return;
         }
       });
-    // try {
-    //   const characterInfo = await getRepresentativeCharacter(receivedArray);
-    //   setUserInfo((prev) => ({
-    //     ...prev,
-    //     characterName: characterInfo.characterName,
-    //     characterLevel: characterInfo.characterLevel,
-    //     characterImage: characterInfo.characterImage,
-    //   }));
-    // } catch (error) {
-    //   console.log(error);
-    //   // do nothing
-    // }
   }, [isLoading, errorText]);
   return (
     <div className='mb-10 w-full h-full'>
@@ -170,6 +144,17 @@ export default function ApiKeyInputPanel() {
         setErrorText={setErrorText}
         LoadingProgress={progress}
       />
+      <div className='flex items-center'>
+        <StarTextArea text='API KEY 입력' />
+        <Link href='/guide'>
+          <span className='underline underline-offset-2 font-regular text-white text-sm ml-4 mr-1'>
+            발급 가이드 바로가기
+          </span>
+        </Link>
+        <button onClick={() => router.push('./guide')}>
+          <OpenInNewIcon fontSize='small' color='secondary' />
+        </button>
+      </div>
       <ApiKeyForm onClickSubmit={onClickSubmit} onClickReset={onClickReset} />
     </div>
   );

@@ -24,19 +24,6 @@ export default function ApiKeyDialog({
   };
   return (
     <>
-      <span className='text-white font-bold text-sm'>API Key 입력 가이드 </span>
-      <Dialog>
-        <DialogTrigger asChild>
-          <InfoOutlinedIcon
-            fontSize='small'
-            sx={{ color: '#FFFFFF' }}
-            className='cursor-pointer'
-          />
-        </DialogTrigger>
-        <DialogContent className='flex w-full overflow-y-auto h-screen bg-n1'>
-          <ApiKeyGuidePanel />
-        </DialogContent>
-      </Dialog>
       <Dialog open={errorText !== ''} onOpenChange={onErrorDialogOpenChange}>
         <DialogContent className='bg-n2'>
           <div className='font-bold'>{errorText}</div>
