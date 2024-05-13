@@ -11,11 +11,11 @@ import { useContentError } from '../context/contentErrorContext';
 
 const contentArray = [
   {
-    text: '사용 메소량',
+    text: '소모 메소량',
     component: <UsedMesoPanel />,
   },
   {
-    text: '강화 단계 별 성공률',
+    text: '강화 성공률',
     component: <SuccessRatePanel />,
   },
   {
