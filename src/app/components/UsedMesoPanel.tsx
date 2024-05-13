@@ -12,6 +12,7 @@ import { useCapture } from '../lib/hooks/useCapture';
 import { MasterPrimaryButton } from '../ui/MasterPrimaryButton';
 import MasterSnackBar from '../ui/MasterSnackBar';
 import ImageCard from '../ui/ImageCard';
+import PeriodSelectPanel from './PeriodSelectPanel';
 
 const formatNumberToKorean = (num) => {
   const units = ['', '만', '억', '조'];
@@ -233,8 +234,14 @@ export default function UsedMesoPanel() {
 
   let itemsAndCost = useMemo(() => {
     if (starforceHistoryArray.length === 0) return;
-    return Array.from(getCostFromStarforceHistory(starforceHistoryArray));
-  }, [starforceHistoryArray]);
+    return Array.from(
+      getCostFromStarforceHistory(
+        starforceHistoryArray,
+        userInfo.startDate,
+        userInfo.endDate
+      )
+    );
+  }, [starforceHistoryArray, userInfo.startDate, userInfo.endDate]);
 
   return (
     <div>
@@ -242,6 +249,7 @@ export default function UsedMesoPanel() {
       {errorText === '' && !isLoading && itemsAndCost && (
         <div>
           <div className='mb-5 mt-10 text-[24px] flex flex-col'>
+            <PeriodSelectPanel />
             <span className='mr-2 flex gap-2 items-center'>
               <MasterToolTip
                 text='130레벨 이상의 아이템만 지원합니다.
@@ -252,9 +260,13 @@ export default function UsedMesoPanel() {
               <span className='text-y4 font-bold text-[20px]'>유의사항</span>
             </span>
             <div>
-              <span className='text-white font-bold'>{`${userInfo?.finalStartDate}`}</span>
+              <span className='text-white font-bold'>{`${userInfo.startDate
+                .toISOString()
+                .slice(0, 10)}`}</span>
               <span className='font-regular text-white'> 부터 </span>
-              <span className='text-white font-bold'>{`${userInfo?.finalEndDate}`}</span>
+              <span className='text-white font-bold'>{`${userInfo.endDate
+                .toISOString()
+                .slice(0, 10)}`}</span>
               <span className='font-regular text-white'>
                 {' '}
                 까지 사용한 총 메소는{' '}

@@ -40,6 +40,7 @@ export default function ApiKeyInputPanel() {
     setProgress((prev) => ({ ...prev, total: totalCount }));
     const starforceHistoryArray: starforceHistory[] = [];
 
+    // TODO : change logic (push promise to array and use for await loop)
     while (startDate <= endDate) {
       const currentDateStarforceHistory = await getStarForceInfo(
         apiKey,
@@ -95,6 +96,11 @@ export default function ApiKeyInputPanel() {
         setStarforceHistoryArray(() => {
           return Array.from(result as any[]);
         });
+        setUserInfo((prev) => ({
+          ...prev,
+          startDate: new Date('2023-12-27'),
+          endDate: new Date(),
+        }));
         setIsLoading(false);
         router.push('/result');
       })

@@ -9,37 +9,44 @@ import { MasterPrimaryButton } from '../ui/MasterPrimaryButton';
 
 export default function PeriodSelectPanel() {
   const [isPeriod, setIsPeriod] = useState(false);
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date('2023-12-27'));
   const [endDate, setEndDate] = useState(new Date());
   const [userInfo, setUserInfo] = useUserInfo();
-  const onSelect = useCallback(
-    (value) => {
-      if (value === 'all') {
-        setIsPeriod(false);
-        setUserInfo((prev) => ({
-          ...prev,
-          startDate: '2023-12-27',
-          endDate: new Date().toISOString().slice(0, 10),
-        }));
-      } else if (value === 'partial') {
-        setIsPeriod(true);
-        setUserInfo((prev) => ({
-          ...prev,
-          startDate: new Date(startDate).toISOString().slice(0, 10),
-          endDate: new Date(endDate).toISOString().slice(0, 10),
-        }));
-      } else {
-        console.log('error');
-      }
-    },
-    [setUserInfo]
-  );
+  const onSelect = useCallback((value) => {
+    if (value === 'all') {
+      setIsPeriod(false);
+      setStartDate(new Date('2023-12-27'));
+      setEndDate(new Date());
+      // setUserInfo((prev) => ({
+      //   ...prev,
+      //   startDate: '2023-12-27',
+      //   endDate: new Date().toISOString().slice(0, 10),
+      // }));
+    } else if (value === 'partial') {
+      setIsPeriod(true);
+      // setUserInfo((prev) => ({
+      //   ...prev,
+      //   startDate: new Date(startDate).toISOString().slice(0, 10),
+      //   endDate: new Date(endDate).toISOString().slice(0, 10),
+      // }));
+    } else {
+      console.log('error');
+    }
+  }, []);
+
+  const onSubmit = useCallback(() => {
+    setUserInfo((prev) => ({
+      ...prev,
+      startDate: startDate,
+      endDate: endDate,
+    }));
+  }, [setUserInfo, startDate, endDate]);
 
   useEffect(() => {
     setUserInfo((prev) => ({
       ...prev,
-      startDate: '2023-12-27',
-      endDate: new Date().toISOString().slice(0, 10),
+      startDate: new Date('2023-12-27'),
+      endDate: new Date(),
     }));
   }, []);
 
@@ -47,18 +54,18 @@ export default function PeriodSelectPanel() {
     (date) => {
       if (date < startDate) {
         setStartDate(date);
-        setUserInfo((prev) => ({
-          ...prev,
-          startDate: date.toISOString().slice(0, 10),
-        }));
+        // setUserInfo((prev) => ({
+        //   ...prev,
+        //   startDate: date.toISOString().slice(0, 10),
+        // }));
       }
       setEndDate(date);
-      setUserInfo((prev) => ({
-        ...prev,
-        endDate: date.toISOString().slice(0, 10),
-      }));
+      // setUserInfo((prev) => ({
+      //   ...prev,
+      //   endDate: date.toISOString().slice(0, 10),
+      // }));
     },
-    [startDate, setUserInfo]
+    [startDate]
   );
 
   return (
@@ -73,10 +80,6 @@ export default function PeriodSelectPanel() {
               selected={startDate}
               onChange={(date) => {
                 setStartDate(date);
-                setUserInfo((prev) => ({
-                  ...prev,
-                  startDate: date.toISOString().slice(0, 10),
-                }));
               }}
               minDate={new Date('2023-12-27')}
               placeholderText='시작일'
@@ -92,9 +95,9 @@ export default function PeriodSelectPanel() {
             />
             <MasterPrimaryButton
               text='조회'
-              onClick={undefined}
+              onClick={onSubmit}
               color='r2'
-              type='submit'
+              type={undefined}
             />
           </div>
         )}
