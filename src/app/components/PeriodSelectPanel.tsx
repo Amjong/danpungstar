@@ -91,10 +91,6 @@ export default function PeriodSelectPanel() {
           </div>
         )}
       </div>
-      <MasterToolTip
-        text='2023-12-27 이후의 데이터만 조회 가능합니다'
-        placement='right-end'
-      />
     </div>
   );
 }
