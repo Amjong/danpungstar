@@ -8,8 +8,13 @@ import { useStarforceHistoryArray } from '../context/starforceContext';
 import Link from 'next/link';
 import { useLoading } from '../context/loadingContext';
 import { useContentError } from '../context/contentErrorContext';
+import AchievementPanel from './AchievementPanel';
 
 const contentArray = [
+  {
+    text: '업적',
+    component: <AchievementPanel />,
+  },
   {
     text: '소모 메소량',
     component: <UsedMesoPanel />,
