@@ -17,18 +17,8 @@ export default function PeriodSelectPanel() {
       setIsPeriod(false);
       setStartDate(new Date('2023-12-27'));
       setEndDate(new Date());
-      // setUserInfo((prev) => ({
-      //   ...prev,
-      //   startDate: '2023-12-27',
-      //   endDate: new Date().toISOString().slice(0, 10),
-      // }));
     } else if (value === 'partial') {
       setIsPeriod(true);
-      // setUserInfo((prev) => ({
-      //   ...prev,
-      //   startDate: new Date(startDate).toISOString().slice(0, 10),
-      //   endDate: new Date(endDate).toISOString().slice(0, 10),
-      // }));
     } else {
       console.log('error');
     }
@@ -54,51 +44,50 @@ export default function PeriodSelectPanel() {
     (date) => {
       if (date < startDate) {
         setStartDate(date);
-        // setUserInfo((prev) => ({
-        //   ...prev,
-        //   startDate: date.toISOString().slice(0, 10),
-        // }));
       }
       setEndDate(date);
-      // setUserInfo((prev) => ({
-      //   ...prev,
-      //   endDate: date.toISOString().slice(0, 10),
-      // }));
     },
     [startDate]
   );
 
   return (
     <div>
-      <div className='flex flex-row translate-x-[11px] mt-5 flex-wrap'>
+      <div className='flex flex-row translate-x-[11px] pt-5 flex-wrap items-center'>
         <div className='min-x-[182px]'>
           <RadioBtns onSelect={onSelect} />
         </div>
         {isPeriod && (
-          <div className='flex gap-5'>
-            <MyCalendar
-              selected={startDate}
-              onChange={(date) => {
-                setStartDate(date);
-              }}
-              minDate={new Date('2023-12-27')}
-              placeholderText='시작일'
-            />
-            <MyCalendar
-              selected={endDate}
-              onChange={onChangeEnd}
-              minDate={new Date('2023-12-27')}
-              maxDate={new Date(startDate).setFullYear(
-                startDate.getFullYear() + 1
-              )}
-              placeholderText='종료일'
-            />
-            <MasterPrimaryButton
-              text='조회'
-              onClick={onSubmit}
-              color='r2'
-              type={undefined}
-            />
+          <div className='flex'>
+            <div className='w-[39%]'>
+              <MyCalendar
+                selected={startDate}
+                onChange={(date) => {
+                  setStartDate(date);
+                }}
+                minDate={new Date('2023-12-27')}
+                maxDate={undefined}
+                placeholderText='시작일'
+              />
+            </div>
+            <div className='w-[39%] ml-7'>
+              <MyCalendar
+                selected={endDate}
+                onChange={onChangeEnd}
+                minDate={new Date('2023-12-27')}
+                maxDate={new Date(startDate).setFullYear(
+                  startDate.getFullYear() + 1
+                )}
+                placeholderText='종료일'
+              />
+            </div>
+            <div className='w-[15%] ml-10 scale-[0.95]'>
+              <MasterPrimaryButton
+                text='조회'
+                onClick={onSubmit}
+                color='r2'
+                type={undefined}
+              />
+            </div>
           </div>
         )}
       </div>

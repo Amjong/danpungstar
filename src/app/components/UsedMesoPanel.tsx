@@ -248,7 +248,7 @@ export default function UsedMesoPanel() {
       {errorText === '' && isLoading && <TableSkeleton />}
       {errorText === '' && !isLoading && itemsAndCost && (
         <div>
-          <div className='mb-5 mt-10 text-[24px] flex flex-col'>
+          <div className='mb-5 pt-10 text-[24px] flex flex-col'>
             <PeriodSelectPanel />
             <span className='mr-2 flex gap-2 items-center'>
               <MasterToolTip
