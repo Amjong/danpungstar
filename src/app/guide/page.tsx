@@ -22,7 +22,7 @@ export default function Page() {
     setMenu(value);
   };
   return (
-    <div className='flex flex-col bg-n1 px-10'>
+    <div className='flex flex-col px-10 bg-gradient-to-b from-[#1A191B] from-0% via-[#202441] via-50% to-[#2F2948] to-100%'>
       <div className='mt-5'>
         <TabBtns onChanged={handleChange} tabBtnsArray={tabBtnsArray} />
       </div>
