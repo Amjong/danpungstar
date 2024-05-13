@@ -40,13 +40,17 @@ export default function ApiKeyInputPanel() {
     setProgress((prev) => ({ ...prev, total: totalCount }));
     const starforceHistoryArray: starforceHistory[] = [];
 
-    // TODO : change logic (push promise to array and use for await loop)
+    let dateArray: Promise<starforceHistory>[] = [];
     while (startDate <= endDate) {
-      const currentDateStarforceHistory = await getStarForceInfo(
-        apiKey,
-        startDate.toISOString().slice(0, 10)
+      dateArray.push(
+        getStarForceInfo(apiKey, startDate.toISOString().slice(0, 10))
       );
-      starforceHistoryArray.push(currentDateStarforceHistory);
+      startDate.setDate(startDate.getDate() + 1);
+    }
+
+    for (const promise of dateArray) {
+      const currentDateArray = await promise;
+      starforceHistoryArray.push(currentDateArray);
       doneCount++;
       setProgress((prev) => ({ ...prev, current: doneCount }));
       if (!isLoading || errorText !== '') {
@@ -54,7 +58,6 @@ export default function ApiKeyInputPanel() {
         console.log(isLoading, errorText);
         return undefined;
       }
-      startDate.setDate(startDate.getDate() + 1);
     }
 
     return starforceHistoryArray;
