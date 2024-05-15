@@ -1,6 +1,6 @@
 import { useMemo, useState, useRef } from 'react';
 import { useStarforceHistoryArray } from '../context/starforceContext';
-import { getCostFromStarforceHistory } from '../lib/util/starforceUtility';
+import { getCostInfoFromStarforceHistory } from '../lib/util/starforceUtility';
 import { useTable, useFilters, useSortBy } from 'react-table';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { useLoading } from '../context/loadingContext';
@@ -13,21 +13,7 @@ import { MasterPrimaryButton } from '../ui/MasterPrimaryButton';
 import MasterSnackBar from '../ui/MasterSnackBar';
 import ImageCard from '../ui/ImageCard';
 import PeriodSelectPanel from './PeriodSelectPanel';
-
-const formatNumberToKorean = (num) => {
-  const units = ['', '만', '억', '조'];
-  const splitNum = String(num)
-    .split(/(?=(?:\d{4})+(?!\d))/g)
-    .reverse();
-  return splitNum
-    .map((n, i) => {
-      const parsed = parseInt(n, 10);
-      return parsed > 0 ? parsed + units[i] : '';
-    })
-    .reverse()
-    .join(' ')
-    .trim();
-};
+import { formatNumberToKorean } from '../lib/util/generalUtility';
 
 function CheckboxColumnFilter({
   column: { filterValue, setFilter, preFilteredRows, id },
@@ -235,7 +221,7 @@ export default function UsedMesoPanel() {
   let itemsAndCost = useMemo(() => {
     if (starforceHistoryArray.length === 0) return;
     return Array.from(
-      getCostFromStarforceHistory(
+      getCostInfoFromStarforceHistory(
         starforceHistoryArray,
         userInfo.startDate,
         userInfo.endDate

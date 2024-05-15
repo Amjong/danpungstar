@@ -112,7 +112,148 @@ const applyStarforceEventList = (eventListArray, currentCost) => {
   return Math.round(finalCost / 10) * 10;
 };
 
-export const getCostFromStarforceHistory = (
+export const getAchievementInfoFromStarforceHistory = (
+  starforceHistoryArray: starforceHistory[],
+  startDate: Date,
+  endDate: Date
+) => {
+  let mostConsecutiveSuccess = {
+    count: 0,
+    itemName: '',
+    date: new Date(0),
+  };
+  let mostConsecutiveFailure = {
+    count: 0,
+    itemName: '',
+    date: new Date(0),
+  };
+  let totalCost: number = 0;
+  let totalDiscountCost: number = 0;
+  let currentConsecutiveSuccess: number = 0;
+  let currentConsecutiveFailure: number = 0;
+  let currentStarforceCount: number = 0;
+  let currentStarcatchSuccessCount: number = 0;
+
+  starforceHistoryArray.forEach(({ date, infoArray }) => {
+    if (date < startDate || date > endDate) {
+      return;
+    }
+    infoArray.forEach((info) => {
+      /** Calculate totalCost and totalDiscountCost start **/
+      let currentCost = 0;
+      const itemsMap = getItemsMap();
+      if (!itemsMap.has(info.target_item)) {
+        return;
+      }
+      currentStarforceCount++;
+      let itemLevel = itemsMap.get(info.target_item).level;
+      let originalCost = calculateCost(
+        itemLevel,
+        info.before_starforce_count,
+        info.date_create
+      );
+
+      currentCost = applyStarforceEventList(
+        info.starforce_event_list,
+        originalCost
+      );
+      totalDiscountCost += originalCost - currentCost;
+
+      if (info.destroy_defence === '파괴 방지 적용') {
+        currentCost += originalCost;
+      }
+
+      totalCost += originalCost;
+
+      /** Calculate totalCost and totalDiscountCost End **/
+
+      if (
+        info.item_upgrade_result === '성공' &&
+        info.before_starforce_count >= 15 &&
+        info.chance_time === '찬스타임 미적용'
+      ) {
+        currentConsecutiveSuccess++;
+        currentConsecutiveFailure = 0;
+      } else if (
+        info.item_upgrade_result.includes('실패') &&
+        info.before_starforce_count >= 15
+      ) {
+        currentConsecutiveFailure++;
+        currentConsecutiveSuccess = 0;
+      }
+
+      if (currentConsecutiveSuccess > mostConsecutiveSuccess.count) {
+        mostConsecutiveSuccess.count = currentConsecutiveSuccess;
+        mostConsecutiveSuccess.itemName = info.target_item;
+        mostConsecutiveSuccess.date = date;
+      }
+
+      if (currentConsecutiveFailure > mostConsecutiveFailure.count) {
+        mostConsecutiveFailure.count = currentConsecutiveFailure;
+        mostConsecutiveFailure.itemName = info.target_item;
+        mostConsecutiveFailure.date = date;
+      }
+
+      if (info.starcatch_result === '성공') {
+        currentStarcatchSuccessCount++;
+      }
+    });
+  });
+
+  return {
+    mostConsecutiveSuccess: { ...mostConsecutiveSuccess },
+    mostConsecutiveFailure: { ...mostConsecutiveFailure },
+    totalStarforceCount: currentStarforceCount,
+    totalStarcatchSuccessCount: currentStarcatchSuccessCount,
+    totalCost: totalCost,
+    totalDiscountCost: totalDiscountCost,
+  };
+};
+
+export const getTotalCostFromStarforceHistory = (
+  starforceHistoryArray: starforceHistory[],
+  startDate: Date,
+  endDate: Date
+) => {
+  let totalCost: number = 0;
+  let totalDiscountCost: number = 0;
+  starforceHistoryArray.forEach(({ date, infoArray }) => {
+    if (date < startDate || date > endDate) {
+      return;
+    }
+    infoArray.forEach((info) => {
+      let currentCost = 0;
+      const itemsMap = getItemsMap();
+      if (!itemsMap.has(info.target_item)) {
+        return;
+      }
+      let itemLevel = itemsMap.get(info.target_item).level;
+      let originalCost = calculateCost(
+        itemLevel,
+        info.before_starforce_count,
+        info.date_create
+      );
+
+      currentCost = applyStarforceEventList(
+        info.starforce_event_list,
+        originalCost
+      );
+      totalDiscountCost += originalCost - currentCost;
+
+      if (info.destroy_defence === '파괴 방지 적용') {
+        currentCost += originalCost;
+      }
+
+      totalCost += originalCost;
+    });
+  });
+  return {
+    totalCost: totalCost,
+    totalDiscountCost: totalDiscountCost,
+  };
+};
+
+export const getCostInfoFromStarforceHistory = (
   starforceHistoryArray: starforceHistory[],
   startDate: Date,
   endDate: Date

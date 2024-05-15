@@ -9,9 +9,27 @@ export type starforceInfo = {
   destroy_defence: string;
   starcatch_result: string;
   item_upgrade_result: string;
+  change_time: string;
 };
 
 export type starforceHistory = {
   date: Date;
   infoArray: starforceInfo[];
+};
+
+export type starforceAchievement = {
+  mostConsecutiveSuccess: {
+    count: number;
+    itemName: string;
+    date: Date;
+  };
+  mostConsecutiveFailure: {
+    count: number;
+    itemName: string;
+    date: Date;
+  };
+  totalStarforceCount: number;
+  totalStarcatchSuccessCount: number;
+  totalCost: number;
+  totalDiscountCost: number;
 };
