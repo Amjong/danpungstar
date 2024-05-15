@@ -182,7 +182,7 @@ export const getAchievementInfoFromStarforceHistory = (
 
       if (
         info.item_upgrade_result === '성공' &&
-        info.before_starforce_count >= 15 &&
+        info.before_starforce_count >= 12 &&
         info.chance_time === '찬스타임 미적용'
       ) {
         if (currentConsecutiveSuccess === 0) {
@@ -205,7 +205,7 @@ export const getAchievementInfoFromStarforceHistory = (
         currentConsecutiveFailure = 0;
       } else if (
         info.item_upgrade_result.includes('실패') &&
-        info.before_starforce_count >= 15
+        info.before_starforce_count >= 12
       ) {
         if (currentConsecutiveFailure === 0) {
           currentConsecutiveFailureItem = info.target_item;

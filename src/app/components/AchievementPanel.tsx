@@ -72,7 +72,7 @@ export default function AchievementPanel() {
           <div className='flex flex-col w-full h-full mx-5 justify-between items-center'>
             <div className='h-[20%]'>
               <div className='font-regular text-white text-sm text-center'>
-                15성 이상
+                12성 이상
               </div>
               <div className='font-bold text-white text-center text-xl'>
                 연속 최다 성공 횟수
@@ -132,7 +132,7 @@ export default function AchievementPanel() {
           <div className='flex flex-col w-full h-full mx-5 justify-between items-center'>
             <div className='h-[20%]'>
               <div className='font-regular text-white text-sm text-center'>
-                15성 이상
+                12성 이상
               </div>
               <div className='font-bold text-white text-center text-xl'>
                 연속 최다 실패 횟수
