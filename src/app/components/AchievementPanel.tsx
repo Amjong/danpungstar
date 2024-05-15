@@ -37,33 +37,34 @@ export default function AchievementPanel() {
             <div className='font-bold text-white text-center text-xl pb-10'>
               총 사용 메소량/할인으로 아낀 메소량
             </div>
-            <div className='font-regular text-white'>
-              <div className='py-2'>
-                <span className='text-sm'>스타포스 강화에 총 </span>
-                <span className='font-bold text-2xl'>
-                  {formatNumberToKorean(totalCost)}
-                </span>
-                <span className='text-sm'> 메소를 사용하고</span>
+            <div className='font-regular text-white flex space-x-4'>
+              <div className='py-2 flex flex-col space-y-[48px] mt-6'>
+                <div className='text-sm'>스타포스 강화에 총 </div>
+                <div className='text-sm text-y4'>할인 이벤트로 </div>
+                <div className='text-y4'>할인율 </div>
               </div>
-
-              <div className='py-2'>
-                <span className='text-sm text-y4'>할인 이벤트로 </span>
-                <span className='font-bold text-y4 text-2xl'>
-                  {formatNumberToKorean(totalDiscountCost)}
-                </span>
-                <span className='text-sm text-y4'> 메소를 아꼈어요</span>
+              <div className='flex flex-col'>
+                <div className='font-bold text-2xl'>
+                  {formatNumberToKorean(totalCost) || 0}
+                </div>
+                <div className='font-bold text-y4 text-2xl'>
+                  {formatNumberToKorean(totalDiscountCost) || 0}
+                </div>
+                <div className='text-y4 font-bold text-2xl'>
+                  <span>
+                    {Math.round(
+                      (totalDiscountCost / (totalCost + totalDiscountCost)) *
+                        100 *
+                        10
+                    ) / 10 || 0}
+                  </span>
+                  <span className='font-regular text-sm'> %</span>
+                </div>
               </div>
-              <span className='text-y4'>할인율 : </span>
-              <span className='text-y4 font-bold text-2xl'>
-                {`${
-                  Math.round(
-                    (totalDiscountCost / (totalCost + totalDiscountCost)) *
-                      100 *
-                      10
-                  ) / 10
-                }`}
-              </span>
-              <span className='font-regular text-sm'> %</span>
+              <div className='py-2 flex flex-col space-y-[48px] mt-6'>
+                <div className='text-sm'> 메소를 사용하고</div>
+                <div className='text-sm text-y4'> 메소를 아꼈어요</div>
+              </div>
             </div>
           </div>
         </MasterCard>
