@@ -78,14 +78,21 @@ export default function AchievementPanel() {
                 연속 최다 성공 횟수
               </div>
             </div>
-            <div className='h-[33%] flex items-center justify-center'>
-              <span className='font-bold text-y4 text-[72px] text-center'>
-                {mostConsecutiveSuccess.count}
-              </span>
-              <span className='text-white font-regular text-sm translate-y-4 pl-1'>
-                {' '}
-                회
-              </span>
+            <div className='h-[33%] flex items-center justify-around flex-col'>
+              <div>
+                <span className='font-bold text-y4 text-[72px] text-center'>
+                  {mostConsecutiveSuccess.count}
+                </span>
+                <span className='text-white font-regular text-sm translate-y-4 pl-1'>
+                  {' '}
+                  회
+                </span>
+              </div>
+              <div>
+                <span className='text-sm text-white font-regular'>
+                  {`(${mostConsecutiveSuccess.firstStarforceCount}성 -> ${mostConsecutiveSuccess.lastStarforceCount}성)`}
+                </span>
+              </div>
             </div>
             <div className='bg-gray-600 flex flex-col w-[94%] h-[27%] rounded-sm justify-center translate-y-5'>
               <div className='text-white font-regular pl-5'>
@@ -131,14 +138,21 @@ export default function AchievementPanel() {
                 연속 최다 실패 횟수
               </div>
             </div>
-            <div className='h-[33%] flex items-center justify-center'>
-              <span className='font-bold text-r2 text-[72px] text-center'>
-                {mostConsecutiveFailure.count}
-              </span>
-              <span className='text-white font-regular text-sm translate-y-4 pl-1'>
-                {' '}
-                회
-              </span>
+            <div className='h-[33%] flex items-center justify-around flex-col'>
+              <div>
+                <span className='font-bold text-r2 text-[72px] text-center'>
+                  {mostConsecutiveSuccess.count}
+                </span>
+                <span className='text-white font-regular text-sm translate-y-4 pl-1'>
+                  {' '}
+                  회
+                </span>
+              </div>
+              <div>
+                <span className='text-sm text-white font-regular'>
+                  {`(${mostConsecutiveFailure.firstStarforceCount}성 -> ${mostConsecutiveFailure.lastStarforceCount}성)`}
+                </span>
+              </div>
             </div>
             <div className='bg-gray-600 flex flex-col w-[94%] h-[27%] rounded-sm justify-center translate-y-5'>
               <div className='text-white font-regular pl-5'>

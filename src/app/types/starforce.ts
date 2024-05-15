@@ -22,11 +22,15 @@ export type starforceAchievement = {
     count: number;
     itemName: string;
     date: Date;
+    firstStarforceCount: number;
+    lastStarforceCount: number;
   };
   mostConsecutiveFailure: {
     count: number;
     itemName: string;
     date: Date;
+    firstStarforceCount: number;
+    lastStarforceCount: number;
   };
   totalStarforceCount: number;
   totalStarcatchSuccessCount: number;

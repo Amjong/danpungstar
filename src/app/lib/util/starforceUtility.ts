@@ -86,6 +86,7 @@ export const getStarForceInfo: (
       cursor = finalResponse.next_cursor;
       continue;
     } else {
+      starforceHistoryArray.reverse();
       return {
         date: new Date(dateString),
         infoArray: [...starforceHistoryArray],
@@ -121,23 +122,33 @@ export const getAchievementInfoFromStarforceHistory = (
     count: 0,
     itemName: '',
     date: new Date(0),
+    firstStarforceCount: 0,
+    lastStarforceCount: 0,
   };
   let mostConsecutiveFailure = {
     count: 0,
     itemName: '',
     date: new Date(0),
+    firstStarforceCount: 0,
+    lastStarforceCount: 0,
   };
   let totalCost: number = 0;
   let totalDiscountCost: number = 0;
   let currentConsecutiveSuccess: number = 0;
+  let currentConsecutiveSuccessItem: string = '';
   let currentConsecutiveFailure: number = 0;
+  let currentConsecutiveFailureItem: string = '';
   let currentStarforceCount: number = 0;
   let currentStarcatchSuccessCount: number = 0;
+  let currentSuccessFirstStarforceCount: number = 0;
+  let currentFailureFirstStarforceCount: number = 0;
 
   starforceHistoryArray.forEach(({ date, infoArray }) => {
     if (date < startDate || date > endDate) {
       return;
     }
+
+    console.log(infoArray);
     infoArray.forEach((info) => {
       /** Calculate totalCost and totalDiscountCost start **/
       let currentCost = 0;
@@ -172,13 +183,34 @@ export const getAchievementInfoFromStarforceHistory = (
         info.before_starforce_count >= 15 &&
         info.chance_time === '찬스타임 미적용'
       ) {
-        currentConsecutiveSuccess++;
+        if (currentConsecutiveSuccess === 0) {
+          currentConsecutiveSuccessItem = info.target_item;
+          currentSuccessFirstStarforceCount = info.before_starforce_count;
+        }
+        if (currentConsecutiveSuccessItem === info.target_item) {
+          currentConsecutiveSuccess++;
+        } else {
+          currentConsecutiveSuccess = 1;
+          currentConsecutiveSuccessItem = info.target_item;
+          currentSuccessFirstStarforceCount = info.before_starforce_count;
+        }
         currentConsecutiveFailure = 0;
       } else if (
         info.item_upgrade_result.includes('실패') &&
         info.before_starforce_count >= 15
       ) {
-        currentConsecutiveFailure++;
+        if (currentConsecutiveFailure === 0) {
+          currentConsecutiveFailureItem = info.target_item;
+          currentFailureFirstStarforceCount = info.before_starforce_count;
+        }
+
+        if (currentConsecutiveFailureItem === info.target_item) {
+          currentConsecutiveFailure++;
+        } else {
+          currentConsecutiveFailure = 1;
+          currentConsecutiveFailureItem = info.target_item;
+          currentFailureFirstStarforceCount = info.before_starforce_count;
+        }
         currentConsecutiveSuccess = 0;
       }
 
@@ -186,12 +218,18 @@ export const getAchievementInfoFromStarforceHistory = (
         mostConsecutiveSuccess.count = currentConsecutiveSuccess;
         mostConsecutiveSuccess.itemName = info.target_item;
         mostConsecutiveSuccess.date = date;
+        mostConsecutiveSuccess.firstStarforceCount =
+          currentSuccessFirstStarforceCount;
+        mostConsecutiveSuccess.lastStarforceCount = info.after_starforce_count;
       }
 
       if (currentConsecutiveFailure > mostConsecutiveFailure.count) {
         mostConsecutiveFailure.count = currentConsecutiveFailure;
         mostConsecutiveFailure.itemName = info.target_item;
         mostConsecutiveFailure.date = date;
+        mostConsecutiveFailure.firstStarforceCount =
+          currentFailureFirstStarforceCount;
+        mostConsecutiveFailure.lastStarforceCount = info.after_starforce_count;
       }
 
       if (info.starcatch_result === '성공') {
