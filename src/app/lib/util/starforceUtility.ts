@@ -141,7 +141,9 @@ export const getAchievementInfoFromStarforceHistory = (
   let currentStarforceCount: number = 0;
   let currentStarcatchSuccessCount: number = 0;
   let currentSuccessFirstStarforceCount: number = 0;
+  let currentSuccessLastStarforceCount: number = 0;
   let currentFailureFirstStarforceCount: number = 0;
+  let currentFailureLastStarforceCount: number = 0;
 
   starforceHistoryArray.forEach(({ date, infoArray }) => {
     if (date < startDate || date > endDate) {
@@ -186,13 +188,19 @@ export const getAchievementInfoFromStarforceHistory = (
         if (currentConsecutiveSuccess === 0) {
           currentConsecutiveSuccessItem = info.target_item;
           currentSuccessFirstStarforceCount = info.before_starforce_count;
+          currentSuccessLastStarforceCount = info.after_starforce_count;
         }
-        if (currentConsecutiveSuccessItem === info.target_item) {
+        if (
+          currentConsecutiveSuccessItem === info.target_item &&
+          currentSuccessLastStarforceCount === info.before_starforce_count
+        ) {
           currentConsecutiveSuccess++;
+          currentSuccessLastStarforceCount = info.after_starforce_count;
         } else {
           currentConsecutiveSuccess = 1;
           currentConsecutiveSuccessItem = info.target_item;
           currentSuccessFirstStarforceCount = info.before_starforce_count;
+          currentSuccessLastStarforceCount = info.after_starforce_count;
         }
         currentConsecutiveFailure = 0;
       } else if (
@@ -202,14 +210,20 @@ export const getAchievementInfoFromStarforceHistory = (
         if (currentConsecutiveFailure === 0) {
           currentConsecutiveFailureItem = info.target_item;
           currentFailureFirstStarforceCount = info.before_starforce_count;
+          currentFailureLastStarforceCount = info.after_starforce_count;
         }
 
-        if (currentConsecutiveFailureItem === info.target_item) {
+        if (
+          currentConsecutiveFailureItem === info.target_item &&
+          currentFailureFirstStarforceCount === info.before_starforce_count
+        ) {
           currentConsecutiveFailure++;
+          currentFailureLastStarforceCount = info.after_starforce_count;
         } else {
           currentConsecutiveFailure = 1;
           currentConsecutiveFailureItem = info.target_item;
           currentFailureFirstStarforceCount = info.before_starforce_count;
+          currentFailureLastStarforceCount = info.after_starforce_count;
         }
         currentConsecutiveSuccess = 0;
       }
