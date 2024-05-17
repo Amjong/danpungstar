@@ -150,13 +150,22 @@ export const getAchievementInfoFromStarforceHistory = (
   let currentJetBlackDestroyCount: number = 0;
 
   starforceHistoryArray.forEach(({ date, infoArray }) => {
-    const d = date.getDay();
+    const d = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    const start = new Date(
+      startDate.getFullYear(),
+      startDate.getMonth(),
+      startDate.getDate()
+    );
+    const end = new Date(
+      endDate.getFullYear(),
+      endDate.getMonth(),
+      endDate.getDate()
+    );
 
-    if (d < startDate.getDay() || d > endDate.getDay()) {
+    if (d < start || d > end) {
       return;
     }
 
-    console.log(infoArray);
     infoArray.forEach((info) => {
       /** Calculate totalCost and totalDiscountCost start **/
       let currentCost = 0;

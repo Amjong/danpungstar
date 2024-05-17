@@ -160,7 +160,7 @@ export default function AchievementPanel() {
             <div className='h-[33%] flex items-center justify-around flex-col'>
               <div>
                 <span className='font-bold text-r2 text-[72px] text-center'>
-                  {mostConsecutiveSuccess.count}
+                  {mostConsecutiveFailure.count}
                 </span>
                 <span className='text-white font-regular text-sm translate-y-4 pl-1'>
                   {' '}
