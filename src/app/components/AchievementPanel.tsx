@@ -16,6 +16,7 @@ export default function AchievementPanel() {
     totalStarcatchSuccessCount,
     totalCost,
     totalDiscountCost,
+    destroyCount,
   } = useMemo(() => {
     return getAchievementInfoFromStarforceHistory(
       starforceHistoryArray,
@@ -70,6 +71,48 @@ export default function AchievementPanel() {
         </MasterCard>
         <MasterCard>
           <div className='flex flex-col w-full h-full mx-5 justify-between items-center'>
+            <div className='h-[20%] font-bold text-white text-center text-xl'>
+              총 강화 횟수
+            </div>
+            <div className='h-[35%] flex items-center justify-around'>
+              <span className='font-bold text-y4 text-[72px] text-center'>
+                {totalStarforceCount}
+              </span>
+              <span className='text-white font-regular text-sm translate-y-4 pl-1'>
+                {' '}
+                회
+              </span>
+            </div>
+            <div className=' h-[30%] translate-y-5'></div>
+          </div>
+        </MasterCard>
+        <MasterCard>
+          <div className='flex flex-col w-full h-full mx-5 justify-between items-center'>
+            <div className='h-[20%] font-bold text-white text-center text-xl'>
+              총 파괴 횟수
+            </div>
+            <div className='h-[35%] flex items-center justify-around'>
+              <span className='font-bold text-r2 text-[72px] text-center'>
+                {destroyCount.total}
+              </span>
+              <span className='text-white font-regular text-sm translate-y-4 pl-1'>
+                {' '}
+                회
+              </span>
+            </div>
+            <div className='flex flex-col w-[94%] h-[30%] rounded-[10px] justify-center translate-y-5'>
+              <div className='text-white font-regular pl-5'>
+                * 칠흑의 보스 세트아이템 파괴 횟수 :{' '}
+                {destroyCount.jetBlack || 0} 회
+              </div>
+              <div className='text-white font-regular pl-5'>
+                * 에테르넬 세트아이템 파괴 횟수 : {destroyCount.eternel || 0} 회
+              </div>
+            </div>
+          </div>
+        </MasterCard>
+        <MasterCard>
+          <div className='flex flex-col w-full h-full mx-5 justify-between items-center'>
             <div className='h-[20%]'>
               <div className='font-regular text-white text-sm text-center'>
                 12성 이상
@@ -108,30 +151,6 @@ export default function AchievementPanel() {
           <div className='flex flex-col w-full h-full mx-5 justify-between items-center'>
             <div className='h-[20%]'>
               <div className='font-regular text-white text-sm text-center'>
-                평균 스타캐치
-              </div>
-              <div className='font-bold text-white text-center text-xl'>
-                성공률
-              </div>
-            </div>
-            <div className='h-[33%] flex items-center justify-center'>
-              <span className='font-bold text-y4 text-[72px]'>{`${
-                Math.round(
-                  (totalStarcatchSuccessCount / totalStarforceCount) * 100 * 10
-                ) / 10
-              }`}</span>
-              <span className='text-white font-regular text-sm translate-y-4 pl-1'>
-                {' '}
-                %
-              </span>
-            </div>
-            <div className='h-[27%]'></div>
-          </div>
-        </MasterCard>
-        <MasterCard>
-          <div className='flex flex-col w-full h-full mx-5 justify-between items-center'>
-            <div className='h-[20%]'>
-              <div className='font-regular text-white text-sm text-center'>
                 12성 이상
               </div>
               <div className='font-bold text-white text-center text-xl'>
@@ -164,6 +183,31 @@ export default function AchievementPanel() {
             </div>
           </div>
         </MasterCard>
+        <MasterCard>
+          <div className='flex flex-col w-full h-full mx-5 justify-between items-center'>
+            <div className='h-[20%]'>
+              <div className='font-regular text-white text-sm text-center'>
+                평균 스타캐치
+              </div>
+              <div className='font-bold text-white text-center text-xl'>
+                성공률
+              </div>
+            </div>
+            <div className='h-[33%] flex items-center justify-center'>
+              <span className='font-bold text-y4 text-[72px]'>{`${
+                Math.round(
+                  (totalStarcatchSuccessCount / totalStarforceCount) * 100 * 10
+                ) / 10
+              }`}</span>
+              <span className='text-white font-regular text-sm translate-y-4 pl-1'>
+                {' '}
+                %
+              </span>
+            </div>
+            <div className='h-[27%]'></div>
+          </div>
+        </MasterCard>
+
         <MasterCard>
           <span className='font-bold text-white'>
             총 사용 메소량/할인으로 아낀 메소량

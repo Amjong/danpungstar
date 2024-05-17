@@ -1,4 +1,5 @@
 import { starforceHistory, starforceInfo } from './../../types/starforce';
+import { isJetBlackItem } from './mapleUtility';
 
 const { getItemsMap } = require('../../data/ItemInfo');
 const { getStarForceUrl } = require('./openApiManager');
@@ -144,9 +145,14 @@ export const getAchievementInfoFromStarforceHistory = (
   let currentSuccessLastStarforceCount: number = 0;
   let currentFailureFirstStarforceCount: number = 0;
   let currentFailureLastStarforceCount: number = 0;
+  let currentTotalDestroyCount: number = 0;
+  let currentEternelDestroyCount: number = 0;
+  let currentJetBlackDestroyCount: number = 0;
 
   starforceHistoryArray.forEach(({ date, infoArray }) => {
-    if (date < startDate || date > endDate) {
+    const d = date.getDay();
+
+    if (d < startDate.getDay() || d > endDate.getDay()) {
       return;
     }
 
@@ -180,6 +186,7 @@ export const getAchievementInfoFromStarforceHistory = (
 
       /** Calculate totalCost and totalDiscountCost End **/
 
+      /** Calculate consecutive counts Start **/
       if (
         info.item_upgrade_result === '성공' &&
         info.before_starforce_count >= 12 &&
@@ -215,7 +222,7 @@ export const getAchievementInfoFromStarforceHistory = (
 
         if (
           currentConsecutiveFailureItem === info.target_item &&
-          currentFailureFirstStarforceCount === info.before_starforce_count
+          currentFailureLastStarforceCount === info.before_starforce_count
         ) {
           currentConsecutiveFailure++;
           currentFailureLastStarforceCount = info.after_starforce_count;
@@ -246,8 +253,25 @@ export const getAchievementInfoFromStarforceHistory = (
         mostConsecutiveFailure.lastStarforceCount = info.after_starforce_count;
       }
 
+      /** Calculate consecutive counts End **/
+
+      /** Calculate starcatch count Start **/
+
       if (info.starcatch_result === '성공') {
         currentStarcatchSuccessCount++;
+      }
+
+      /** Calculate starcatch count End **/
+
+      /** Calculate destroy count Start **/
+
+      if (info.item_upgrade_result === '파괴') {
+        currentTotalDestroyCount++;
+        if (info.target_item.includes('에테르넬')) {
+          currentEternelDestroyCount++;
+        } else if (isJetBlackItem(info.target_item)) {
+          currentJetBlackDestroyCount++;
+        }
       }
     });
   });
@@ -259,6 +283,11 @@ export const getAchievementInfoFromStarforceHistory = (
     totalStarcatchSuccessCount: currentStarcatchSuccessCount,
     totalCost: totalCost,
     totalDiscountCost: totalDiscountCost,
+    destroyCount: {
+      eternel: currentEternelDestroyCount,
+      jetBlack: currentJetBlackDestroyCount,
+      total: currentTotalDestroyCount,
+    },
   };
 };
 

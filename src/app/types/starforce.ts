@@ -32,6 +32,11 @@ export type starforceAchievement = {
     firstStarforceCount: number;
     lastStarforceCount: number;
   };
+  destroyCount: {
+    eternel: number;
+    jetBlack: number;
+    total: number;
+  };
   totalStarforceCount: number;
   totalStarcatchSuccessCount: number;
   totalCost: number;
