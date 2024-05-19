@@ -137,7 +137,7 @@ export default function AchievementPanel() {
                 </span>
               </div>
             </div>
-            <div className='bg-gray-600 flex flex-col w-[94%] h-[27%] rounded-[10px] justify-center translate-y-5'>
+            <div className='bg-g1 flex flex-col w-[94%] h-[27%] rounded-[10px] justify-center translate-y-5'>
               <div className='text-white font-regular pl-5'>
                 * 날짜 : {mostConsecutiveSuccess.date.toLocaleDateString()}
               </div>
@@ -173,7 +173,7 @@ export default function AchievementPanel() {
                 </span>
               </div>
             </div>
-            <div className='bg-gray-600 flex flex-col w-[94%] h-[27%] rounded-[10px] justify-center translate-y-5'>
+            <div className='bg-g1 flex flex-col w-[94%] h-[27%] rounded-[10px] justify-center translate-y-5'>
               <div className='text-white font-regular pl-5'>
                 * 날짜 : {mostConsecutiveFailure.date.toLocaleDateString()}
               </div>

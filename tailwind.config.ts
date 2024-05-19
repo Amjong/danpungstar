@@ -38,6 +38,7 @@ const config: Config = {
         n0: '#1A202C',
         n1: '#282C47',
         n2: '#53566C',
+        g1: '#928C8B',
         black: '#1E1E1E',
         white: '#FFFFFF',
         border: 'hsl(var(--border))',
